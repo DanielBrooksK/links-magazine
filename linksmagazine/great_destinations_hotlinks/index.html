@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Links Magazine — Great Destinations Digital Issue. Read the complete magazine online featuring Turnberry, Pebble Beach, Royal County Down, Augusta National and the world's greatest golf courses.">
+  <meta property="og:title" content="Links Magazine — Great Destinations Issue">
+  <meta property="og:description" content="The world's finest golf magazine, now available in digital edition.">
+  <meta property="og:type" content="website">
+  <title>Links Magazine — Great Destinations Issue · Digital Edition</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       DIGITAL ISSUE VIEWER — COMPLETE STYLES
+       ============================================ */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:       #1B4D2E;
+      --green-light: #2E7D4F;
+      --gold:        #B8973A;
+      --cream:       #F9F5EE;
+      --black:       #0D0D0D;
+      --white:       #FFFFFF;
+      --gray-800:    #2C2C2C;
+      --gray-500:    #888888;
+      --gray-300:    #D1D1D1;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-headline:'Playfair Display', Georgia, serif;
+      --font-body:    'Lora', Georgia, serif;
+      --font-ui:      'DM Sans', system-ui, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: var(--font-ui);
+      background-color: #111;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    /* ----------------------------------------
+       CHROME — top bar + bottom bar
+       ---------------------------------------- */
+    .viewer-chrome {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* Top bar */
+    .viewer-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 52px;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      pointer-events: all;
+      flex-shrink: 0;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .topbar-logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-issue {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.45);
+      padding-left: 12px;
+      border-left: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .topbar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.7);
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      background: transparent;
+      transition: all 0.2s ease;
+    }
+
+    .topbar-btn:hover {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .topbar-btn--gold {
+      color: var(--gold);
+      border-color: rgba(184, 151, 58, 0.5);
+    }
+
+    .topbar-btn--gold:hover {
+      background: rgba(184, 151, 58, 0.1);
+      border-color: var(--gold);
+    }
+
+    /* Bottom control bar */
+    .viewer-controls {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      height: 56px;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      pointer-events: all;
+      flex-shrink: 0;
+    }
+
+    .ctrl-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      color: rgba(255,255,255,0.65);
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+
+    .ctrl-btn:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .ctrl-btn:disabled {
+      color: rgba(255,255,255,0.2);
+      cursor: default;
+    }
+
+    .ctrl-btn:disabled:hover {
+      background: transparent;
+    }
+
+    /* Page counter / input */
+    .ctrl-pages {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .ctrl-page-input {
+      width: 40px;
+      text-align: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 2px;
+      color: var(--white);
+      font-family: var(--font-ui);
+      font-size: 12px;
+      padding: 3px 4px;
+    }
+
+    .ctrl-page-input:focus {
+      outline: 1px solid var(--gold);
+      border-color: var(--gold);
+    }
+
+    .ctrl-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255,255,255,0.1);
+      margin: 0 8px;
+    }
+
+    /* Zoom display */
+    .ctrl-zoom {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      padding: 0 8px;
+    }
+
+    /* Progress scrubber */
+    .ctrl-scrubber-wrap {
+      flex: 1;
+      max-width: 200px;
+      padding: 0 16px;
+    }
+
+    .ctrl-scrubber {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 2px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 99px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .ctrl-scrubber::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      cursor: pointer;
+    }
+
+    /* ----------------------------------------
+       MAIN VIEWER STAGE
+       ---------------------------------------- */
+    .viewer-stage {
+      position: fixed;
+      top: 52px;
+      bottom: 56px;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+      overflow: hidden;
+    }
+
+    /* Spread container (two pages side by side) */
+    .spread {
+      display: flex;
+      align-items: stretch;
+      height: min(calc(100% - 40px), 700px);
+      max-height: 700px;
+      aspect-ratio: 1.41 / 1; /* two pages together = roughly A4 landscape */
+      position: relative;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.04);
+      transform-origin: center center;
+      transition: transform 0.3s ease;
+    }
+
+    /* Page gutter shadow */
+    .spread::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%; right: 50%;
+      width: 2px;
+      margin-left: -1px;
+      background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.4) 100%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Individual page */
+    .page {
+      flex: 1;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      background: var(--white);
+    }
+
+    .page--left {
+      border-right: 1px solid rgba(0,0,0,0.15);
+    }
+
+    /* Page contents */
+    .page-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Page fold effect */
+    .page--left .page-inner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 20px;
+      background: linear-gradient(to right, rgba(0,0,0,0.12) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* Page number folio */
+    .folio {
+      position: absolute;
+      bottom: 14px;
+      font-family: var(--font-ui);
+      font-size: 9px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(0,0,0,0.35);
+      z-index: 5;
+    }
+
+    .folio--left  { left: 20px; }
+    .folio--right { right: 20px; }
+
+    /* ----------------------------------------
+       HOTLINK OVERLAYS
+       ---------------------------------------- */
+    .hotlink {
+      position: absolute;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+    .hotlink::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border: 1.5px solid transparent;
+      border-radius: 2px;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .hotlink:hover::after {
+      border-color: rgba(184, 151, 58, 0.8);
+      background: rgba(184, 151, 58, 0.08);
+    }
+
+    /* Hotlink tooltip */
+    .hotlink[data-title]:hover::before {
+      content: attr(data-title);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: rgba(0,0,0,0.85);
+      color: var(--white);
+      font-size: 10px;
+      font-family: var(--font-ui);
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* ============================================
+       PAGE CONTENT LAYOUTS (per page number)
+       ============================================ */
+
+    /* --- PAGES 28-29: TURNBERRY FEATURE SPREAD --- */
+
+    /* LEFT page (28) — full bleed image */
+    .spread-28-29 .page--left .page-inner {
+      background: #0d1a10;
+    }
+
+    .spread-28-29 .page--left .full-bleed-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0.9;
+    }
+
+    .spread-28-29 .page--left .image-caption {
+      position: absolute;
+      bottom: 28px;
+      left: 20px;
+      right: 20px;
+      font-family: var(--font-ui);
+      font-size: 7.5px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    /* LEFT page: section label overlay */
+    .spread-28-29 .page--left .page-section-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      background: rgba(0,0,0,0.5);
+      padding: 3px 8px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* RIGHT page (29) — article text */
+    .spread-28-29 .page--right .page-inner {
+      background: var(--white);
+      padding: 36px 30px 36px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spread-28-29 .page--right .article-section-label {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .spread-28-29 .page--right .article-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.0;
+      color: var(--black);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .spread-28-29 .page--right .article-rule {
+      width: 32px;
+      height: 2px;
+      background: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .spread-28-29 .page--right .article-deck {
+      font-family: var(--font-body);
+      font-size: 10.5px;
+      font-style: italic;
+      line-height: 1.65;
+      color: #444;
+      margin-bottom: 16px;
+      border-left: 2px solid var(--gold);
+      padding-left: 10px;
+    }
+
+    .spread-28-29 .page--right .article-byline {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(0,0,0,0.4);
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--gray-300);
+    }
+
+    .spread-28-29 .page--right .article-body {
+      font-family: var(--font-body);
+      font-size: 9.5px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      column-count: 2;
+      column-gap: 20px;
+      flex: 1;
+    }
+
+    .spread-28-29 .page--right .article-body p {
+      margin-bottom: 9px;
+    }
+
+    /* Drop cap */
+    .spread-28-29 .page--right .article-body p:first-child::first-letter {
+      font-family: var(--font-display);
+      font-size: 3.8rem;
+      font-weight: 600;
+      line-height: 0.7;
+      float: left;
+      margin-right: 5px;
+      margin-top: 5px;
+      color: var(--green);
+    }
+
+    .spread-28-29 .page--right .at-a-glance-mini {
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: var(--cream);
+      border-left: 2px solid var(--green);
+      font-family: var(--font-ui);
+      font-size: 8px;
+      line-height: 1.6;
+      color: #333;
+      break-inside: avoid;
+    }
+
+    .spread-28-29 .page--right .at-a-glance-mini strong {
+      display: block;
+      font-size: 7.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      margin-bottom: 5px;
+    }
+
+    /* --- PAGES 26-27 --- */
+    .spread-26-27 .page--left .page-inner,
+    .spread-26-27 .page--right .page-inner {
+      padding: 36px 24px;
+      background: var(--white);
+    }
+
+    .spread-26-27 .page--left .page-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .spread-26-27 .dest-feature-image {
+      width: 100%;
+      height: 42%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    .spread-26-27 .dest-section-label {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--green);
+    }
+
+    .spread-26-27 .dest-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.05;
+      color: var(--black);
+    }
+
+    .spread-26-27 .dest-body {
+      font-family: var(--font-body);
+      font-size: 9px;
+      line-height: 1.75;
+      color: #333;
+    }
+
+    /* --- PAGES 30-31 --- */
+    .spread-30-31 .page--left .page-inner,
+    .spread-30-31 .page--right .page-inner {
+      background: var(--black);
+      color: var(--white);
+      padding: 36px 26px;
+    }
+
+    .spread-30-31 .rankings-label {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .spread-30-31 .rankings-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .spread-30-31 .ranking-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .spread-30-31 .rank-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--gold);
+      opacity: 0.6;
+      min-width: 36px;
+      text-align: right;
+    }
+
+    .spread-30-31 .rank-name {
+      font-family: var(--font-headline);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .spread-30-31 .rank-loc {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ============================================
+       THUMBNAILS SIDEBAR (table of contents)
+       ============================================ */
+    .toc-sidebar {
+      position: fixed;
+      left: 0;
+      top: 52px;
+      bottom: 56px;
+      width: 160px;
+      background: rgba(0,0,0,0.92);
+      border-right: 1px solid rgba(255,255,255,0.06);
+      overflow-y: auto;
+      z-index: 50;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.2) transparent;
+    }
+
+    .toc-sidebar.is-open {
+      transform: translateX(0);
+    }
+
+    .toc-heading {
+      padding: 14px 14px 8px;
+      font-size: 9px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.15s ease;
+    }
+
+    .toc-item:hover { background: rgba(255,255,255,0.05); }
+
+    .toc-item.is-active {
+      background: rgba(27,77,46,0.3);
+      border-left: 2px solid var(--green);
+    }
+
+    .toc-item__pg {
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+      min-width: 18px;
+    }
+
+    .toc-item__title {
+      font-size: 10px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.35;
+    }
+
+    .toc-item__section {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--green-light);
+    }
+
+    /* ============================================
+       PAGE TRANSITION ANIMATION
+       ============================================ */
+    .spread.is-turning {
+      transform: rotateY(8deg);
+      opacity: 0.6;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .spread.is-entering {
+      transform: rotateY(0deg);
+      opacity: 1;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    /* ============================================
+       COVER PAGE (pg = 1)
+       ============================================ */
+    .cover-page {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: linear-gradient(160deg, #1B4D2E 0%, #0d2e1a 100%);
+      display: flex;
+      flex-direction: column;
+      padding: 40px 36px;
+    }
+
+    .cover-masthead {
+      font-family: var(--font-ui);
+      font-size: 9px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+
+    .cover-logo {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .cover-issue-label {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .cover-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .cover-feature-label {
+      font-family: var(--font-ui);
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 8px;
+      margin-top: auto;
+    }
+
+    .cover-headline {
+      font-family: var(--font-headline);
+      font-size: clamp(1.2rem, 2.8vw, 2rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .cover-meta {
+      font-family: var(--font-ui);
+      font-size: 9px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+    }
+
+    /* ============================================
+       LOADING SCREEN
+       ============================================ */
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      gap: 16px;
+      transition: opacity 0.4s ease;
+    }
+
+    .loader.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-logo {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--white);
+    }
+
+    .loader-bar {
+      width: 120px;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .loader-bar-fill {
+      height: 100%;
+      width: 0;
+      background: var(--gold);
+      border-radius: 99px;
+      animation: loadProgress 0.9s ease forwards 0.2s;
+    }
+
+    @keyframes loadProgress {
+      to { width: 100%; }
+    }
+
+    .loader-text {
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ============================================
+       RESPONSIVE — single page on mobile
+       ============================================ */
+    @media (max-width: 768px) {
+      .spread {
+        aspect-ratio: 0.707 / 1; /* single A4 page */
+      }
+
+      .page--left { display: none; }
+      .page--right { flex: none; width: 100%; }
+      .spread::after { display: none; }
+
+      .viewer-topbar { padding: 0 14px; }
+      .topbar-issue { display: none; }
+
+      .ctrl-scrubber-wrap { display: none; }
+      .ctrl-zoom { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .toc-sidebar { width: 80vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div class="loader" id="loader">
+    <p class="loader-logo">Links</p>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <p class="loader-text">Loading digital edition</p>
+  </div>
+
+  <!-- Table of Contents sidebar -->
+  <aside class="toc-sidebar" id="toc-sidebar" aria-label="Table of contents">
+    <p class="toc-heading">Contents</p>
+    <div id="toc-list"></div>
+  </aside>
+
+  <!-- Top chrome bar -->
+  <div class="viewer-chrome">
+    <div class="viewer-topbar">
+      <div class="topbar-brand">
+        <button class="topbar-btn" id="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <a href="/" class="topbar-brand" style="pointer-events:all;">
+          <span class="topbar-logo">Links</span>
+          <span class="topbar-issue">Great Destinations Issue &nbsp;·&nbsp; Vol. 28</span>
+        </a>
+      </div>
+      <div class="topbar-actions">
+        <a href="/article/" class="topbar-btn">Read Online</a>
+        <a href="/#subscribe-section" class="topbar-btn topbar-btn--gold">Subscribe</a>
+      </div>
+    </div>
+
+    <!-- Bottom controls -->
+    <div class="viewer-controls">
+      <!-- First page -->
+      <button class="ctrl-btn" id="btn-first" aria-label="First page" title="First page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+      </button>
+
+      <!-- Previous page -->
+      <button class="ctrl-btn" id="btn-prev" aria-label="Previous page" title="Previous page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <!-- Page counter -->
+      <div class="ctrl-pages">
+        <input class="ctrl-page-input" id="page-input" type="number" min="1" aria-label="Current page number" value="29">
+        <span>of <span id="total-pages">36</span></span>
+      </div>
+
+      <!-- Next page -->
+      <button class="ctrl-btn" id="btn-next" aria-label="Next page" title="Next page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <!-- Last page -->
+      <button class="ctrl-btn" id="btn-last" aria-label="Last page" title="Last page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+      </button>
+
+      <div class="ctrl-divider" aria-hidden="true"></div>
+
+      <!-- Scrubber -->
+      <div class="ctrl-scrubber-wrap">
+        <input type="range" class="ctrl-scrubber" id="scrubber" min="1" max="36" value="29" aria-label="Page position">
+      </div>
+
+      <div class="ctrl-divider" aria-hidden="true"></div>
+
+      <!-- Zoom out -->
+      <button class="ctrl-btn" id="btn-zoom-out" aria-label="Zoom out" title="Zoom out">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+      </button>
+
+      <!-- Zoom level -->
+      <div class="ctrl-zoom" id="zoom-display">100%</div>
+
+      <!-- Zoom in -->
+      <button class="ctrl-btn" id="btn-zoom-in" aria-label="Zoom in" title="Zoom in">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ============================================
+       VIEWER STAGE — Spread content
+       ============================================ -->
+  <main class="viewer-stage" id="viewer-stage">
+    <div class="spread" id="spread" role="main" aria-label="Magazine spread">
+      <!-- Pages rendered by JS based on ?pg= param -->
+    </div>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ----------------------------------------
+       ISSUE DATA — Table of Contents
+       ---------------------------------------- */
+    var TOTAL_PAGES = 36;
+
+    var TOC = [
+      { pg: 1,  title: 'Cover',                      section: '' },
+      { pg: 2,  title: 'From the Editor',             section: 'Editorial' },
+      { pg: 4,  title: 'Contributors',                section: 'Editorial' },
+      { pg: 6,  title: 'Contents',                    section: 'This Issue' },
+      { pg: 10, title: 'News & Notes',                section: 'Briefing' },
+      { pg: 14, title: 'Pebble Beach at Dawn',        section: 'Destinations' },
+      { pg: 18, title: 'Royal County Down',           section: 'Destinations' },
+      { pg: 22, title: 'Augusta — Amen Corner',       section: 'Destinations' },
+      { pg: 26, title: 'St Andrews Pilgrimage',       section: 'Destinations' },
+      { pg: 28, title: 'The Trumping of Turnberry',   section: 'Cover Feature' },
+      { pg: 32, title: 'Top 10 Rankings 2025',        section: 'Courses' },
+      { pg: 34, title: 'In the Bag',                  section: 'Equipment' },
+      { pg: 36, title: 'Subscribe',                   section: '' },
+    ];
+
+    /* ----------------------------------------
+       PAGE SPREAD TEMPLATES
+       ---------------------------------------- */
+    function getSpreadHTML(pg) {
+
+      /* Cover page (pg 1) */
+      if (pg === 1) {
+        return {
+          left: '<div class="cover-page">' +
+            '<p class="cover-masthead">Links Magazine</p>' +
+            '<p class="cover-logo">Links</p>' +
+            '<p class="cover-issue-label">The Great Destinations Issue &nbsp;·&nbsp; Vol. 28</p>' +
+            '<div class="cover-rule"></div>' +
+            '<p class="cover-feature-label">Cover Feature</p>' +
+            '<h2 class="cover-headline">The Trumping of Turnberry</h2>' +
+            '<p class="cover-meta">Spring 2025 &nbsp;·&nbsp; $14.95</p>' +
+          '</div>',
+          right: '<div style="background:#0d1a10;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">' +
+            '<img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;opacity:0.85;" alt="Turnberry Ailsa Course">' +
+          '</div>',
+          leftFolio: '',
+          rightFolio: ''
+        };
+      }
+
+      /* Pages 26-27: St Andrews spread */
+      if (pg >= 26 && pg <= 27) {
+        return {
+          left: '<div class="page-inner spread-26-27" style="padding:28px 22px;background:#fff;display:flex;flex-direction:column;gap:10px;">' +
+            '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--green);">Great Destinations</p>' +
+            '<p style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.4rem);font-style:italic;font-weight:300;line-height:1.0;letter-spacing:-.02em;">St Andrews:<br>The Pilgrim\'s Return</p>' +
+            '<div style="width:32px;height:2px;background:var(--gold)"></div>' +
+            '<img src="https://images.unsplash.com/photo-1566648007264-c0bfd2340e10?auto=format&fit=crop&w=600&q=80" style="width:100%;height:38%;object-fit:cover;" alt="St Andrews Old Course">' +
+            '<p style="font-family:var(--font-body);font-size:9px;line-height:1.75;color:#333;">Six centuries of continuous play on the Old Course have left a landscape that doesn\'t so much tell its history as breathe it. Every divot repaired, every bunker raked, every flag replaced is a small act in a ceremony that began before golf had a name.</p>' +
+          '</div>',
+          right: '<div class="page-inner" style="padding:28px 22px;background:var(--cream);display:flex;flex-direction:column;gap:10px;">' +
+            '<img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=600&q=80" style="width:100%;height:45%;object-fit:cover;" alt="Links golf coastal">' +
+            '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--green);">Getting There</p>' +
+            '<div style="font-family:var(--font-ui);font-size:8.5px;line-height:1.8;color:#444;">' +
+              '<b>Airport:</b> Edinburgh (1h 15m)<br>' +
+              '<b>Best Season:</b> May – October<br>' +
+              '<b>Ballot:</b> Apply 12 months ahead<br>' +
+              '<b>Stay:</b> The Old Course Hotel<br>' +
+              '<b>Green Fee:</b> Ballot — from £230' +
+            '</div>' +
+            '<a href="/great-destinations/" style="display:inline-block;margin-top:auto;font-family:var(--font-ui);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--green);border:1px solid var(--green);padding:6px 14px;text-decoration:none;transition:all .15s;">Read Full Feature →</a>' +
+          '</div>',
+          leftFolio: 'Links Magazine · Great Destinations Issue',
+          rightFolio: '27'
+        };
+      }
+
+      /* Pages 28-29: TURNBERRY COVER FEATURE (the main pg=29 spread) */
+      if (pg >= 28 && pg <= 29) {
+        return {
+          left: '<div class="page-inner spread-28-29" style="background:#0d1510;height:100%;">' +
+            '<img class="full-bleed-image" src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1200&q=85" alt="Turnberry Ailsa Course at golden hour with lighthouse">' +
+            '<span class="page-section-label">Cover Feature</span>' +
+            '<p class="image-caption">The Ailsa lighthouse has watched over Turnberry since 1873. Photograph: Alasdair Reid.</p>' +
+          '</div>',
+          right: '<div class="page-inner" style="background:#fff;padding:36px 28px 36px 22px;display:flex;flex-direction:column;">' +
+            '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--green);margin-bottom:10px;">Great Destinations</p>' +
+            '<h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:300;font-style:italic;line-height:1.0;color:#0d0d0d;letter-spacing:-.02em;margin-bottom:12px;">The Trumping<br>of Turnberry</h2>' +
+            '<div style="width:32px;height:2px;background:var(--green);margin-bottom:12px;"></div>' +
+            '<p style="font-family:var(--font-body);font-size:10px;font-style:italic;line-height:1.6;color:#444;border-left:2px solid var(--gold);padding-left:10px;margin-bottom:14px;">How Scotland\'s legendary Ailsa Course reclaimed its place among the world\'s great links — through renovation, controversy, and the enduring power of landscape.</p>' +
+            '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:rgba(0,0,0,.35);margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #d1d1d1;">By James Whitmore &nbsp;·&nbsp; Photography by Alasdair Reid</p>' +
+            '<div style="font-family:var(--font-body);font-size:9.5px;line-height:1.8;color:#1a1a1a;column-count:2;column-gap:18px;flex:1;">' +
+              '<p style="margin-bottom:9px;">There is a moment, usually somewhere around the fourth tee, when the Atlantic wind lifts off the Firth of Clyde and the first silhouette of Ailsa Craig emerges from the morning mist — that great plug of volcanic rock rising 1,114 feet from the sea — and you understand, truly, what it means to play links golf at the edge of the world.</p>' +
+              '<p style="margin-bottom:9px;">This is Turnberry. Not the sanitized version filtered through photographs, but the real thing: raw, improbable, staggeringly beautiful. The course sits on a narrow strip of Ayrshire coastline where the land seems reluctant to release its grip on the sea, and where the lighthouse on the headland stands as the course\'s presiding spirit.</p>' +
+              '<p style="margin-bottom:9px;">The Ailsa Course has hosted four Open Championships, most famously the 1977 edition that produced what many regard as the greatest duel in major championship history: Tom Watson and Jack Nicklaus, so closely matched that the rest of the field barely registered. Watson won with 65-66 final rounds. The course has never been the same since.</p>' +
+              '<div style="background:var(--cream);border-left:2px solid var(--green);padding:8px 10px;margin-bottom:9px;break-inside:avoid;">' +
+                '<p style="font-family:var(--font-ui);font-size:7.5px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--green);margin-bottom:5px;">At a Glance</p>' +
+                '<p style="font-family:var(--font-ui);font-size:8px;line-height:1.65;color:#333;"><b>Location:</b> South Ayrshire, Scotland<br><b>Course:</b> Ailsa Championship Links<br><b>Par / Yards:</b> 70 · 7,461<br><b>Opens hosted:</b> 4 (1977, 1986, 1994, 2009)<br><b>World ranking:</b> #9 (2025)</p>' +
+              '</div>' +
+            '</div>' +
+            '<a href="/article/" style="display:inline-block;margin-top:12px;font-family:var(--font-ui);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:#fff;background:var(--green);border:1px solid var(--green);padding:8px 16px;text-decoration:none;align-self:flex-start;">Continue Reading →</a>' +
+          '</div>',
+          leftFolio: '28 &nbsp;·&nbsp; Links Magazine',
+          rightFolio: 'Great Destinations &nbsp;·&nbsp; 29'
+        };
+      }
+
+      /* Pages 30-31: Rankings */
+      if (pg >= 30 && pg <= 31) {
+        var rankData = [
+          ['01','Royal County Down','Newcastle, N. Ireland'],
+          ['02','Pine Valley','Pine Valley, New Jersey'],
+          ['03','Cypress Point','Pebble Beach, California'],
+          ['04','St Andrews Old Course','St Andrews, Scotland'],
+          ['05','Augusta National','Augusta, Georgia'],
+        ];
+        var rankRows = rankData.map(function(r) {
+          return '<div style="display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);">' +
+            '<span style="font-family:var(--font-display);font-size:1.8rem;font-weight:300;line-height:1;color:var(--gold);opacity:.6;min-width:34px;text-align:right;">' + r[0] + '</span>' +
+            '<div><p style="font-family:var(--font-headline);font-size:10px;font-weight:700;color:#fff;margin-bottom:2px;">' + r[1] + '</p>' +
+            '<p style="font-family:var(--font-ui);font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);">' + r[2] + '</p></div>' +
+          '</div>';
+        }).join('');
+
+        var rankData2 = [
+          ['06','Pebble Beach Golf Links','California, USA'],
+          ['07','Shinnecock Hills','Southampton, New York'],
+          ['08','Royal Melbourne (West)','Melbourne, Australia'],
+          ['09','Turnberry — Ailsa','South Ayrshire, Scotland'],
+          ['10','Oakmont','Oakmont, Pennsylvania'],
+        ];
+        var rankRows2 = rankData2.map(function(r) {
+          return '<div style="display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);">' +
+            '<span style="font-family:var(--font-display);font-size:1.8rem;font-weight:300;line-height:1;color:var(--gold);opacity:.6;min-width:34px;text-align:right;">' + r[0] + '</span>' +
+            '<div><p style="font-family:var(--font-headline);font-size:10px;font-weight:700;color:#fff;margin-bottom:2px;">' + r[1] + '</p>' +
+            '<p style="font-family:var(--font-ui);font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);">' + r[2] + '</p></div>' +
+          '</div>';
+        }).join('');
+
+        return {
+          left: '<div style="background:#0d0d0d;padding:32px 24px;height:100%;box-sizing:border-box;">' +
+            '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin-bottom:8px;">Annual Rankings</p>' +
+            '<p style="font-family:var(--font-display);font-size:clamp(1.5rem,3.2vw,2.5rem);font-weight:300;font-style:italic;line-height:1.0;color:#fff;letter-spacing:-.02em;margin-bottom:18px;">World Top 10<br>Courses · 2025</p>' +
+            rankRows +
+          '</div>',
+          right: '<div style="background:#111;padding:32px 24px;height:100%;box-sizing:border-box;">' +
+            '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin-bottom:8px;">Continued</p>' +
+            rankRows2 +
+            '<div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);">' +
+              '<a href="/courses/" style="font-family:var(--font-ui);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--green-light);text-decoration:none;">See Full Top 100 Rankings →</a>' +
+            '</div>' +
+          '</div>',
+          leftFolio: '<span style="color:rgba(255,255,255,.25);">30 &nbsp;·&nbsp; Links Magazine</span>',
+          rightFolio: '<span style="color:rgba(255,255,255,.25);">Rankings &nbsp;·&nbsp; 31</span>'
+        };
+      }
+
+      /* Generic fallback for other page numbers */
+      var labels = {
+        2: ['Editorial','A Letter From the Editor'],
+        4: ['Contributors','The Team Behind This Issue'],
+        6: ['Contents','What\'s Inside — Vol. 28'],
+        10: ['Briefing','News & Notes from the World of Golf'],
+        14: ['Destinations','Pebble Beach at Dawn'],
+        18: ['Destinations','Royal County Down — The World\'s Greatest Links'],
+        22: ['Destinations','Augusta — The Corner of Amen'],
+        34: ['Equipment','In the Bag · 2025'],
+        36: ['Subscribe','Never Miss an Issue'],
+      };
+
+      var nearestPg = Object.keys(labels).reduce(function(prev, curr) {
+        return Math.abs(curr - pg) < Math.abs(prev - pg) ? curr : prev;
+      });
+      var meta = labels[nearestPg] || ['Links Magazine','Great Destinations Issue'];
+
+      var bgColors = ['#fff','#F9F5EE'];
+      var bg0 = bgColors[0], bg1 = bgColors[pg % 2];
+
+      return {
+        left: '<div style="background:' + bg0 + ';padding:36px 24px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">' +
+          '<p style="font-family:var(--font-ui);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--green);margin-bottom:12px;">' + meta[0] + '</p>' +
+          '<p style="font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2.4rem);font-weight:300;font-style:italic;line-height:1.1;letter-spacing:-.02em;color:#0d0d0d;">' + meta[1] + '</p>' +
+          '<div style="width:32px;height:1px;background:var(--gold);margin:16px auto;"></div>' +
+          '<p style="font-family:var(--font-body);font-size:9px;font-style:italic;color:var(--gray-500);">Page ' + (pg - 1) + ' of ' + TOTAL_PAGES + '</p>' +
+        '</div>',
+        right: '<div style="background:' + bg1 + ';padding:36px 24px;height:100%;box-sizing:border-box;">' +
+          '<img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=600&q=80" style="width:100%;height:50%;object-fit:cover;margin-bottom:16px;" alt="Golf course">' +
+          '<p style="font-family:var(--font-body);font-size:9px;line-height:1.75;color:#333;">Continue the journey through our Great Destinations Issue — the world\'s most spectacular golf venues, celebrated in full.</p>' +
+          '<a href="/great-destinations/" style="display:inline-block;margin-top:14px;font-family:var(--font-ui);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--green);border:1px solid var(--green);padding:6px 14px;text-decoration:none;">Explore Destinations →</a>' +
+        '</div>',
+        leftFolio: 'Links Magazine · Great Destinations Issue',
+        rightFolio: String(pg)
+      };
+    }
+
+    /* ----------------------------------------
+       STATE
+       ---------------------------------------- */
+    var currentPage = 1;
+    var zoomLevel = 1.0;
+    var spread = document.getElementById('spread');
+    var pageInput = document.getElementById('page-input');
+    var scrubber = document.getElementById('scrubber');
+    var zoomDisplay = document.getElementById('zoom-display');
+
+    /* ----------------------------------------
+       RENDER SPREAD
+       ---------------------------------------- */
+    function renderSpread(pg, animate) {
+      pg = Math.max(1, Math.min(TOTAL_PAGES, pg));
+
+      if (animate) {
+        spread.classList.add('is-turning');
+        setTimeout(function () {
+          doRender(pg);
+          spread.classList.remove('is-turning');
+        }, 200);
+      } else {
+        doRender(pg);
+      }
+
+      currentPage = pg;
+      pageInput.value = pg;
+      scrubber.value = pg;
+      updateNavButtons();
+      updateTOCActive(pg);
+      updateURL(pg);
+    }
+
+    function doRender(pg) {
+      var data = getSpreadHTML(pg);
+      spread.innerHTML =
+        '<div class="page page--left"><div class="page-inner">' + data.left + '</div>' +
+        (data.leftFolio ? '<span class="folio folio--left">' + data.leftFolio + '</span>' : '') +
+        '</div>' +
+        '<div class="page page--right"><div class="page-inner">' + data.right + '</div>' +
+        (data.rightFolio ? '<span class="folio folio--right">' + data.rightFolio + '</span>' : '') +
+        '</div>';
+
+      // Hotlinks — link from spread to article pages
+      addHotlinks(pg);
+    }
+
+    function addHotlinks(pg) {
+      if (pg >= 28 && pg <= 29) {
+        // "Continue Reading" button is already in HTML
+        // Add hotlink zone over the headline area on right page
+        var rightPage = spread.querySelector('.page--right');
+        if (rightPage) {
+          var hl = document.createElement('a');
+          hl.href = '/article/';
+          hl.className = 'hotlink';
+          hl.setAttribute('data-title', 'Read: The Trumping of Turnberry');
+          hl.style.cssText = 'top:18%;left:5%;width:90%;height:22%;';
+          rightPage.querySelector('.page-inner').appendChild(hl);
+        }
+      }
+    }
+
+    /* ----------------------------------------
+       NAVIGATION
+       ---------------------------------------- */
+    function updateNavButtons() {
+      document.getElementById('btn-first').disabled = currentPage <= 1;
+      document.getElementById('btn-prev').disabled  = currentPage <= 1;
+      document.getElementById('btn-next').disabled  = currentPage >= TOTAL_PAGES;
+      document.getElementById('btn-last').disabled  = currentPage >= TOTAL_PAGES;
+    }
+
+    document.getElementById('btn-first').addEventListener('click', function() { renderSpread(1, true); });
+    document.getElementById('btn-prev').addEventListener('click',  function() { renderSpread(currentPage - 2, true); });
+    document.getElementById('btn-next').addEventListener('click',  function() { renderSpread(currentPage + 2, true); });
+    document.getElementById('btn-last').addEventListener('click',  function() { renderSpread(TOTAL_PAGES, true); });
+
+    pageInput.addEventListener('change', function() {
+      var v = parseInt(this.value, 10);
+      if (!isNaN(v)) renderSpread(v, true);
+    });
+
+    scrubber.addEventListener('input', function() {
+      renderSpread(parseInt(this.value, 10), false);
+    });
+
+    /* Keyboard navigation */
+    document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT') return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') renderSpread(currentPage + 2, true);
+      if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   renderSpread(currentPage - 2, true);
+      if (e.key === 'Home') renderSpread(1, true);
+      if (e.key === 'End')  renderSpread(TOTAL_PAGES, true);
+    });
+
+    /* ----------------------------------------
+       ZOOM
+       ---------------------------------------- */
+    function applyZoom() {
+      spread.style.transform = 'scale(' + zoomLevel + ')';
+      zoomDisplay.textContent = Math.round(zoomLevel * 100) + '%';
+    }
+
+    document.getElementById('btn-zoom-in').addEventListener('click', function() {
+      zoomLevel = Math.min(zoomLevel + 0.15, 2.0);
+      applyZoom();
+    });
+
+    document.getElementById('btn-zoom-out').addEventListener('click', function() {
+      zoomLevel = Math.max(zoomLevel - 0.15, 0.4);
+      applyZoom();
+    });
+
+    /* Scroll to zoom */
+    document.getElementById('viewer-stage').addEventListener('wheel', function(e) {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      zoomLevel += e.deltaY < 0 ? 0.05 : -0.05;
+      zoomLevel = Math.max(0.4, Math.min(2.0, zoomLevel));
+      applyZoom();
+    }, { passive: false });
+
+    /* ----------------------------------------
+       TABLE OF CONTENTS
+       ---------------------------------------- */
+    var tocSidebar = document.getElementById('toc-sidebar');
+    var tocToggle  = document.getElementById('toc-toggle');
+    var tocList    = document.getElementById('toc-list');
+
+    TOC.forEach(function(item) {
+      var el = document.createElement('div');
+      el.className = 'toc-item';
+      el.dataset.pg = item.pg;
+      el.innerHTML =
+        '<span class="toc-item__pg">' + item.pg + '</span>' +
+        '<div>' +
+          '<p class="toc-item__title">' + item.title + '</p>' +
+          (item.section ? '<p class="toc-item__section">' + item.section + '</p>' : '') +
+        '</div>';
+      el.addEventListener('click', function() {
+        renderSpread(parseInt(this.dataset.pg, 10), true);
+        tocSidebar.classList.remove('is-open');
+        tocToggle.setAttribute('aria-expanded', 'false');
+      });
+      tocList.appendChild(el);
+    });
+
+    tocToggle.addEventListener('click', function() {
+      var open = tocSidebar.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', String(open));
+    });
+
+    function updateTOCActive(pg) {
+      document.querySelectorAll('.toc-item').forEach(function(el) {
+        var itemPg = parseInt(el.dataset.pg, 10);
+        el.classList.toggle('is-active', pg >= itemPg && pg < itemPg + 2);
+      });
+    }
+
+    /* ----------------------------------------
+       URL — read & write ?pg=N
+       ---------------------------------------- */
+    function getPageFromURL() {
+      var params = new URLSearchParams(window.location.search);
+      var pg = parseInt(params.get('pg') || params.get('page') || '29', 10);
+      return isNaN(pg) ? 29 : pg;
+    }
+
+    function updateURL(pg) {
+      var url = window.location.pathname + '?pg=' + pg + '&pm=1#pg' + pg;
+      history.replaceState({ pg: pg }, '', url);
+    }
+
+    window.addEventListener('popstate', function(e) {
+      if (e.state && e.state.pg) renderSpread(e.state.pg, true);
+    });
+
+    /* ----------------------------------------
+       TOUCH SWIPE
+       ---------------------------------------- */
+    var touchStartX = 0;
+    var touchStartY = 0;
+
+    document.getElementById('viewer-stage').addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    document.getElementById('viewer-stage').addEventListener('touchend', function(e) {
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      var dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (Math.abs(dx) > 60 && dy < 60) {
+        if (dx < 0) renderSpread(currentPage + 1, true);
+        else renderSpread(currentPage - 1, true);
+      }
+    }, { passive: true });
+
+    /* ----------------------------------------
+       INIT
+       ---------------------------------------- */
+    function init() {
+      var startPage = getPageFromURL();
+      renderSpread(startPage, false);
+
+      // Hide loader
+      setTimeout(function() {
+        document.getElementById('loader').classList.add('is-hidden');
+      }, 900);
+    }
+
+    init();
+
+  })();
+  </script>
+
+</body>
+</html>

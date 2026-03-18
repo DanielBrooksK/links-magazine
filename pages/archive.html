@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Links Magazine Archive — Browse past issues from our award-winning golf publication, from the Great Destinations Issue to the Top 100 Courses special.">
+  <title>The Archive — Links Magazine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages/archive.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar__inner">
+          <span class="top-bar__issue">Links Magazine &nbsp;·&nbsp; Great Destinations Issue &nbsp;·&nbsp; Vol. 28</span>
+          <a href="../index.html#subscribe-section" class="top-bar__subscribe">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="main-nav__inner">
+          <ul class="nav-links nav-links--left" role="list">
+            <li><a href="article.html" class="nav-link">Features</a></li>
+            <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+          </ul>
+          <a href="../index.html" class="site-logo" aria-label="Links Magazine — Home">
+            <span class="logo-wordmark">Links</span>
+            <span class="logo-sub">Magazine</span>
+          </a>
+          <div class="nav-actions">
+            <ul class="nav-links" role="list">
+              <li><a href="gear.html" class="nav-link">Gear</a></li>
+              <li><a href="archive.html" class="nav-link">Archive</a></li>
+            </ul>
+            <button class="nav-search-btn" aria-label="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            </button>
+            <a href="../index.html#subscribe-section" class="btn btn-outline btn--nav">Subscribe</a>
+          </div>
+          <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-sidebar">
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    <aside class="nav-sidebar" id="nav-sidebar" aria-label="Mobile navigation" aria-hidden="true">
+      <button class="nav-sidebar__close" aria-label="Close menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <span class="nav-sidebar__logo">Links</span>
+      <nav class="nav-sidebar__nav">
+        <a href="article.html" class="sidebar-link">Features</a>
+        <a href="destinations.html" class="sidebar-link">Destinations</a>
+        <a href="courses.html" class="sidebar-link">Courses</a>
+        <a href="gear.html" class="sidebar-link">Gear</a>
+        <a href="archive.html" class="sidebar-link">Archive</a>
+      </nav>
+      <a href="../index.html#subscribe-section" class="btn btn-primary sidebar-subscribe">Subscribe</a>
+    </aside>
+  </header>
+
+  <main>
+
+    <!-- ARCHIVE HERO -->
+    <section class="archive-hero" aria-label="The Archive">
+      <div class="container">
+        <span class="archive-hero__eyebrow">Links Magazine · Est. 1998</span>
+        <h1 class="archive-hero__title">The Archive</h1>
+        <p class="archive-hero__desc">Every issue, every feature, every course visited and piece of equipment tested — collected here for the serious golfer.</p>
+      </div>
+    </section>
+
+    <!-- ===== ISSUE COVERS GRID ===== -->
+    <section class="section" aria-labelledby="issues-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-header__text">
+            <span class="section-label">Past Issues</span>
+            <h2 class="section-title section-title--small" id="issues-heading">Recent Issues</h2>
+          </div>
+        </div>
+
+        <div class="issues-grid stagger-children" role="list" aria-label="Links Magazine past issues">
+
+          <!-- Issue 1 — Current -->
+          <article class="issue-cover issue-cover--1 issue-cover--current" role="listitem" aria-label="Great Destinations Issue — Current">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <span class="issue-cover__current-badge">Current</span>
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Cover Feature</span>
+              <h2 class="issue-cover__feature-title">Great Destinations Issue</h2>
+              <p class="issue-cover__meta">Vol. 28 &nbsp;·&nbsp; Spring 2025</p>
+              <a href="../index.html" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 2 -->
+          <article class="issue-cover issue-cover--2" role="listitem" aria-label="The Masters Preview Issue">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Special Preview</span>
+              <h2 class="issue-cover__feature-title">The Masters Preview Issue</h2>
+              <p class="issue-cover__meta">Vol. 27 &nbsp;·&nbsp; Winter 2024/25</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 3 -->
+          <article class="issue-cover issue-cover--3" role="listitem" aria-label="Scotland and Ireland Special">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Special Issue</span>
+              <h2 class="issue-cover__feature-title">Scotland &amp; Ireland Special</h2>
+              <p class="issue-cover__meta">Vol. 26 &nbsp;·&nbsp; Autumn 2024</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 4 -->
+          <article class="issue-cover issue-cover--4" role="listitem" aria-label="Top 100 Courses Issue">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Annual Rankings</span>
+              <h2 class="issue-cover__feature-title">Top 100 Courses Issue</h2>
+              <p class="issue-cover__meta">Vol. 25 &nbsp;·&nbsp; Summer 2024</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 5 -->
+          <article class="issue-cover issue-cover--5" role="listitem" aria-label="Equipment of the Year">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Annual Awards</span>
+              <h2 class="issue-cover__feature-title">Equipment of the Year</h2>
+              <p class="issue-cover__meta">Vol. 24 &nbsp;·&nbsp; Spring 2024</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 6 -->
+          <article class="issue-cover issue-cover--6" role="listitem" aria-label="The Augusta Retrospective">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Retrospective</span>
+              <h2 class="issue-cover__feature-title">The Augusta Retrospective</h2>
+              <p class="issue-cover__meta">Vol. 23 &nbsp;·&nbsp; Winter 2023/24</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 7 -->
+          <article class="issue-cover issue-cover--7" role="listitem" aria-label="Links Golf Special">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Special Issue</span>
+              <h2 class="issue-cover__feature-title">Links Golf Special</h2>
+              <p class="issue-cover__meta">Vol. 22 &nbsp;·&nbsp; Autumn 2023</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 8 -->
+          <article class="issue-cover issue-cover--8" role="listitem" aria-label="The Ryder Cup Issue">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Special Coverage</span>
+              <h2 class="issue-cover__feature-title">The Ryder Cup Issue</h2>
+              <p class="issue-cover__meta">Vol. 21 &nbsp;·&nbsp; Summer 2023</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+          <!-- Issue 9 -->
+          <article class="issue-cover issue-cover--9" role="listitem" aria-label="Winter Escapes Issue">
+            <div class="issue-cover__bg" aria-hidden="true"></div>
+            <div class="issue-cover__texture" aria-hidden="true"></div>
+            <div class="issue-cover__content">
+              <p class="issue-cover__masthead">Links Magazine</p>
+              <p class="issue-cover__logo">Links</p>
+              <div class="issue-cover__ornament" aria-hidden="true"></div>
+              <span class="issue-cover__feature-label">Travel Special</span>
+              <h2 class="issue-cover__feature-title">Winter Escapes Issue</h2>
+              <p class="issue-cover__meta">Vol. 20 &nbsp;·&nbsp; Spring 2023</p>
+              <a href="#" class="issue-cover__view-link">View Issue</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIGITAL ARCHIVE ===== -->
+    <section class="section digital-archive-section" aria-labelledby="digital-archive-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-header__text">
+            <span class="section-label">Digital Archive</span>
+            <h2 class="section-title section-title--small" id="digital-archive-heading">Articles by Year</h2>
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="archive-year-group fade-in">
+          <h3 class="archive-year-label">2025</h3>
+          <div class="archive-article-list">
+            <a href="article.html" class="archive-article-item">
+              <span class="archive-article-date">Spring 2025</span>
+              <span class="archive-article-title">The Trumping of Turnberry — Scotland's Ailsa Course Reborn</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+            <a href="destinations.html" class="archive-article-item">
+              <span class="archive-article-date">Spring 2025</span>
+              <span class="archive-article-title">Pebble Beach at Dawn — Before the World Arrives</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+            <a href="courses.html" class="archive-article-item">
+              <span class="archive-article-date">Spring 2025</span>
+              <span class="archive-article-title">World Top 10 Rankings 2025 — The Full Survey</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+            <a href="gear.html" class="archive-article-item">
+              <span class="archive-article-date">Spring 2025</span>
+              <span class="archive-article-title">The Driver That Forgives Everything — TaylorMade Qi35 Review</span>
+              <span class="archive-article-section">Gear</span>
+            </a>
+            <a href="courses.html" class="archive-article-item">
+              <span class="archive-article-date">Spring 2025</span>
+              <span class="archive-article-title">Royal County Down: The World's Greatest Links, Revisited</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Winter 2024/25</span>
+              <span class="archive-article-title">Augusta National: 90 Years of the Masters</span>
+              <span class="archive-article-section">Features</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Winter 2024/25</span>
+              <span class="archive-article-title">Rory McIlroy and the Unfinished Career Grand Slam</span>
+              <span class="archive-article-section">Features</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="archive-year-group fade-in">
+          <h3 class="archive-year-label">2024</h3>
+          <div class="archive-article-list">
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Autumn 2024</span>
+              <span class="archive-article-title">St Andrews at 600 — The Old Course Through the Ages</span>
+              <span class="archive-article-section">Features</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Autumn 2024</span>
+              <span class="archive-article-title">Royal Portrush — The North Antrim Coast's Greatest Secret</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Autumn 2024</span>
+              <span class="archive-article-title">Pinehurst No. 2 — Donald Ross's Crowned Masterpiece</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Summer 2024</span>
+              <span class="archive-article-title">Top 100 Courses 2024 — The Complete Rankings</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Summer 2024</span>
+              <span class="archive-article-title">Cape Kidnappers, New Zealand — Golf at the End of the World</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Spring 2024</span>
+              <span class="archive-article-title">Callaway Paradym Ai Smoke — A New Era of AI-Assisted Design</span>
+              <span class="archive-article-section">Gear</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Spring 2024</span>
+              <span class="archive-article-title">Cypress Point — The Course MacKenzie Called His Finest</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="archive-year-group fade-in">
+          <h3 class="archive-year-label">2023</h3>
+          <div class="archive-article-list">
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Autumn 2023</span>
+              <span class="archive-article-title">Ballybunion — Kerry's Links Giant and the Atlantic Wild</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Autumn 2023</span>
+              <span class="archive-article-title">The 2023 Ryder Cup at Marco Simone — Rome's Unexpected Drama</span>
+              <span class="archive-article-section">Features</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Summer 2023</span>
+              <span class="archive-article-title">Pine Valley at 100 — The World's Most Demanding Golf Course</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Summer 2023</span>
+              <span class="archive-article-title">Royal Melbourne — Alister MacKenzie's Australian Masterwork</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Spring 2023</span>
+              <span class="archive-article-title">Dubai to the Algarve — Golf's Winter Escape Routes</span>
+              <span class="archive-article-section">Destinations</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="archive-year-group fade-in">
+          <h3 class="archive-year-label">2022</h3>
+          <div class="archive-article-list">
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Autumn 2022</span>
+              <span class="archive-article-title">Shinnecock Hills — The American Links Ideal Realised</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Summer 2022</span>
+              <span class="archive-article-title">The Open at St Andrews — A Homecoming for the Ages</span>
+              <span class="archive-article-section">Features</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Summer 2022</span>
+              <span class="archive-article-title">Tom Watson at Turnberry — The 45-Year Conversation Continues</span>
+              <span class="archive-article-section">Features</span>
+            </a>
+            <a href="#" class="archive-article-item">
+              <span class="archive-article-date">Spring 2022</span>
+              <span class="archive-article-title">Oakmont — Nine US Opens and the Art of Unforgiving Golf</span>
+              <span class="archive-article-section">Courses</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Subscribe CTA -->
+    <section class="section section-green" id="subscribe-section" aria-labelledby="subscribe-heading-archive">
+      <div class="container" style="text-align:center;">
+        <p style="font-family:var(--font-ui);font-size:var(--text-xs);font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:var(--color-gold);margin-bottom:var(--space-4);">Every Issue. Every Article.</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(var(--text-3xl),5vw,var(--text-5xl));font-weight:300;font-style:italic;color:var(--color-white);margin-bottom:var(--space-3);" id="subscribe-heading-archive">Complete Digital Archive Access</h2>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(255,255,255,0.65);margin-bottom:var(--space-8);max-width:none;">Subscribe for unlimited access to all 27 years of Links Magazine content.</p>
+        <form class="subscribe-form" novalidate aria-label="Subscribe to Links Magazine">
+          <div class="subscribe-form__inner">
+            <label for="subscribe-email-archive" class="sr-only">Email address</label>
+            <input type="email" id="subscribe-email-archive" name="email" placeholder="Your email address" class="subscribe-form__input" autocomplete="email" required>
+            <button type="submit" class="btn btn-gold subscribe-form__btn">Subscribe</button>
+          </div>
+          <div class="subscribe-form__feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="../index.html" class="footer-logo" aria-label="Links Magazine — Home">Links</a>
+          <p class="footer-tagline">The World's Finest Golf Magazine</p>
+          <p class="footer-desc">Published quarterly since 1998. Twenty-seven years of the finest golf writing.</p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Sections</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="article.html">Features</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="gear.html">Gear</a></li>
+            <li><a href="archive.html">Archive</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">About Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Team</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Subscribe</h3>
+          <p class="footer-subscribe-text">Join 240,000 readers worldwide.</p>
+          <a href="../index.html#subscribe-section" class="btn btn-primary footer-subscribe-btn">Get the Magazine</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Links Magazine. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Advertise With Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/magazine.js"></script>
+  <script src="../js/subscribe.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* ============================================
+   LINKS MAGAZINE — GEAR PAGE
+   pages/gear.css
+   ============================================ */
+
+/* ----------------------------------------
+   EDITOR'S PICKS GRID
+   ---------------------------------------- */
+.editors-picks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* ----------------------------------------
+   GEAR REVIEW (long-form)
+   ---------------------------------------- */
+.gear-review-section {
+  border-top: 2px solid var(--color-green);
+  padding-top: var(--space-16);
+}
+
+.gear-review-header {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-12);
+  margin-bottom: var(--space-12);
+  align-items: start;
+}
+
+.gear-review-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.gear-review-meta__eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-green);
+}
+
+.gear-review-meta__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-4xl), 5vw, 4.5rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.gear-review-meta__deck {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: none;
+}
+
+.gear-review-meta__byline {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: var(--space-4);
+  border-top: var(--border-thin);
+}
+
+.gear-review-card {
+  background-color: var(--color-cream);
+  padding: var(--space-6);
+}
+
+.gear-review-card__image-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--space-5);
+}
+
+.gear-review-card__image-wrap::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.gear-review-card__image-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gear-review-card__name {
+  font-family: var(--font-headline);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.gear-review-card__brand {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.gear-review-card__price {
+  font-family: var(--font-ui);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--color-green);
+  margin-bottom: var(--space-5);
+}
+
+.gear-review-card__scores {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.gear-review-card__verdict {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: var(--border-thin);
+}
+
+.gear-review-card__verdict-label {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.gear-review-card__verdict-score {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 400;
+  color: var(--color-green);
+}
+
+.gear-review-card__verdict-score span {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+/* Gear review body text */
+.gear-review-body {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.85;
+  max-width: var(--max-width-reading);
+}
+
+.gear-review-body p {
+  max-width: none;
+  margin-bottom: var(--space-6);
+}
+
+.gear-review-body p + p {
+  margin-top: 0;
+}
+
+.gear-review-body h2 {
+  font-family: var(--font-headline);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+
+/* ----------------------------------------
+   WHAT'S IN THE BAG
+   ---------------------------------------- */
+.in-the-bag-section {
+  background-color: var(--color-cream);
+}
+
+.player-bag-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.player-bag-card {
+  background-color: var(--color-white);
+  padding: var(--space-6);
+}
+
+.player-bag-card__header {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 2px solid var(--color-green);
+}
+
+.player-bag-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background-color: var(--color-gray-300);
+  flex-shrink: 0;
+}
+
+.player-bag-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-bag-card__name {
+  font-family: var(--font-headline);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.player-bag-card__hcp {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-green);
+  margin-bottom: var(--space-1);
+}
+
+.player-bag-card__club {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.bag-equipment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bag-equipment-table tr {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.bag-equipment-table tr:last-child {
+  border-bottom: none;
+}
+
+.bag-equipment-table td {
+  padding: var(--space-2) 0;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  vertical-align: top;
+}
+
+.bag-equipment-table .eq-category {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-right: var(--space-3);
+  min-width: 80px;
+}
+
+.bag-equipment-table .eq-item {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* ----------------------------------------
+   RESPONSIVE
+   ---------------------------------------- */
+@media (max-width: 1280px) {
+  .editors-picks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .gear-review-header {
+    grid-template-columns: 1fr;
+  }
+
+  .gear-review-card {
+    max-width: 400px;
+  }
+
+  .player-bag-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .editors-picks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .player-bag-grid {
+    grid-template-columns: 1fr;
+  }
+}

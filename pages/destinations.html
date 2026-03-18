@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Great Destinations — Links Magazine explores the world's most spectacular and storied golf venues, from Turnberry and Royal County Down to Augusta National and Pebble Beach.">
+  <title>Great Destinations — Links Magazine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages/destinations.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar__inner">
+          <span class="top-bar__issue">Links Magazine &nbsp;·&nbsp; Great Destinations Issue &nbsp;·&nbsp; Vol. 28</span>
+          <a href="../index.html#subscribe-section" class="top-bar__subscribe">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="main-nav__inner">
+          <ul class="nav-links nav-links--left" role="list">
+            <li><a href="article.html" class="nav-link">Features</a></li>
+            <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+          </ul>
+          <a href="../index.html" class="site-logo" aria-label="Links Magazine — Home">
+            <span class="logo-wordmark">Links</span>
+            <span class="logo-sub">Magazine</span>
+          </a>
+          <div class="nav-actions">
+            <ul class="nav-links" role="list">
+              <li><a href="gear.html" class="nav-link">Gear</a></li>
+              <li><a href="archive.html" class="nav-link">Archive</a></li>
+            </ul>
+            <button class="nav-search-btn" aria-label="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            </button>
+            <a href="../index.html#subscribe-section" class="btn btn-outline btn--nav">Subscribe</a>
+          </div>
+          <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-sidebar">
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    <aside class="nav-sidebar" id="nav-sidebar" aria-label="Mobile navigation" aria-hidden="true">
+      <button class="nav-sidebar__close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <span class="nav-sidebar__logo">Links</span>
+      <nav class="nav-sidebar__nav">
+        <a href="article.html" class="sidebar-link">Features</a>
+        <a href="destinations.html" class="sidebar-link">Destinations</a>
+        <a href="courses.html" class="sidebar-link">Courses</a>
+        <a href="gear.html" class="sidebar-link">Gear</a>
+        <a href="archive.html" class="sidebar-link">Archive</a>
+      </nav>
+      <a href="../index.html#subscribe-section" class="btn btn-primary sidebar-subscribe">Subscribe</a>
+    </aside>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Great Destinations">
+      <img class="page-hero__image" src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1920&q=80" alt="Aerial view of world-class links golf course" loading="eager" fetchpriority="high">
+      <div class="page-hero__overlay" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="page-hero__eyebrow">Links Magazine Series</span>
+          <h1 class="page-hero__title">Great<br>Destinations</h1>
+          <p class="page-hero__subtitle">The world's most spectacular and storied golf venues, selected by the editors of Links Magazine</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="destinations-intro fade-in">
+          <p>Some courses reward skill. The greatest courses demand imagination. In our annual Great Destinations series, Links Magazine travels to the venues that define what golf can be at its most exhilarating — where landscape, history, and design conspire to produce something that transcends sport and approaches the condition of art.</p>
+          <p>These are the pilgrimages every serious golfer must make.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESTINATION 1: TURNBERRY ===== -->
+    <article class="destination-feature fade-in" aria-labelledby="dest-turnberry">
+      <div class="destination-feature__image">
+        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1200&q=80" alt="Turnberry Ailsa Course with lighthouse on the Ayrshire coast" loading="lazy">
+      </div>
+      <div class="destination-feature__content">
+        <span class="destination-feature__number" aria-hidden="true">01</span>
+        <span class="section-label">Scotland</span>
+        <h2 class="destination-feature__name" id="dest-turnberry">Turnberry</h2>
+        <p class="destination-feature__country">Ailsa Course &nbsp;·&nbsp; South Ayrshire</p>
+        <p class="destination-feature__desc">On a clear day at Turnberry, the world feels exactly the size it should be. The Ailsa Craig sits on the horizon like a contemplation, Arran stretches north along the Firth, and the lighthouse at the headland stands where it has stood since 1873. Golf here is inseparable from landscape — the fairways press against cliff tops, the greens sit exposed to whatever the Atlantic chooses to deliver, and the entire experience feels both earned and improbable.</p>
+        <p class="destination-feature__desc">Four Open Championships have been decided here, most famously the 1977 Duel in the Sun between Watson and Nicklaus. The £200 million renovation led by architect Martin Ebert has returned the Ailsa to championship condition while pressing it harder against the sea than ever before. Turnberry is, again, one of the defining examinations in world golf.</p>
+        <div class="destination-getting-there">
+          <p class="destination-getting-there__title">Getting There</p>
+          <div class="destination-getting-there__items">
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Airport</span>
+              <span class="destination-getting-there__val">Glasgow Prestwick (30 min)</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Best Season</span>
+              <span class="destination-getting-there__val">May – September</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Stay</span>
+              <span class="destination-getting-there__val">Trump Turnberry Hotel</span>
+            </div>
+          </div>
+        </div>
+        <div class="destination-stats">
+          <div class="destination-stat"><span class="destination-stat__value">4</span><span class="destination-stat__label">Open Championships</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Par 70</span><span class="destination-stat__label">Championship Layout</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">#9</span><span class="destination-stat__label">World Ranking 2025</span></div>
+        </div>
+        <a href="article.html" class="btn btn-primary" style="margin-top: var(--space-8);">Read the Feature</a>
+      </div>
+    </article>
+
+    <!-- ===== DESTINATION 2: PEBBLE BEACH ===== -->
+    <article class="destination-feature destination-feature--reverse destination-feature--cream fade-in" aria-labelledby="dest-pebble">
+      <div class="destination-feature__image">
+        <img src="https://images.unsplash.com/photo-1426728923317-74d81b75e46a?auto=format&fit=crop&w=1200&q=80" alt="Pebble Beach Golf Links with Pacific Ocean and Stillwater Cove" loading="lazy">
+      </div>
+      <div class="destination-feature__content">
+        <span class="destination-feature__number" aria-hidden="true">02</span>
+        <span class="section-label">California</span>
+        <h2 class="destination-feature__name" id="dest-pebble">Pebble Beach</h2>
+        <p class="destination-feature__country">Pebble Beach Golf Links &nbsp;·&nbsp; Monterey Peninsula</p>
+        <p class="destination-feature__desc">Pebble Beach is America's answer to the links ideal — a course built at the sea's edge on the rugged Monterey Peninsula, where the Pacific arrives in earnest and holes hang over cliffs that drop sixty feet to the rocks below. The 7th is the shortest par-3 in major championship golf; the 18th, playing along Stillwater Cove to a green hugging the rocky shore, is the most dramatic closing hole on earth.</p>
+        <p class="destination-feature__desc">Six US Opens have tested the game's best here. Jack Nicklaus played what he called his finest ever round on these fairways. Tom Watson chipped in on the 71st hole in 1982 to deny Nicklaus a sixth US Open title. History is not decoration at Pebble Beach — it is the ground beneath your feet.</p>
+        <div class="destination-getting-there">
+          <p class="destination-getting-there__title">Getting There</p>
+          <div class="destination-getting-there__items">
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Airport</span>
+              <span class="destination-getting-there__val">Monterey Regional (15 min)</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Best Season</span>
+              <span class="destination-getting-there__val">April – October</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Stay</span>
+              <span class="destination-getting-there__val">The Lodge at Pebble Beach</span>
+            </div>
+          </div>
+        </div>
+        <div class="destination-stats">
+          <div class="destination-stat"><span class="destination-stat__value">6</span><span class="destination-stat__label">US Open Championships</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Par 72</span><span class="destination-stat__label">7,075 yards</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">#6</span><span class="destination-stat__label">World Ranking 2025</span></div>
+        </div>
+        <a href="courses.html" class="btn btn-primary" style="margin-top: var(--space-8);">See Course Review</a>
+      </div>
+    </article>
+
+    <!-- ===== DESTINATION 3: ROYAL COUNTY DOWN ===== -->
+    <article class="destination-feature fade-in" aria-labelledby="dest-rcd">
+      <div class="destination-feature__image">
+        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=80" alt="Royal County Down links with Mourne mountains backdrop" loading="lazy">
+      </div>
+      <div class="destination-feature__content">
+        <span class="destination-feature__number" aria-hidden="true">03</span>
+        <span class="section-label">Northern Ireland</span>
+        <h2 class="destination-feature__name" id="dest-rcd">Royal County Down</h2>
+        <p class="destination-feature__country">Championship Links &nbsp;·&nbsp; Newcastle, Co. Down</p>
+        <p class="destination-feature__desc">Consistently ranked the finest golf course in the world, Royal County Down sits in Dundrum Bay with the granite peaks of the Mountains of Mourne rising behind the 12th green. The course has a quality of total naturalness — as if the holes were discovered rather than designed, the fairways carved between sand hills that have stood for millennia. Blind tee shots demand nerve and local knowledge in equal measure.</p>
+        <p class="destination-feature__desc">Old Tom Morris laid out the first nine holes in 1889 for the sum of four pounds. The course that exists today is largely the work of nature, gentle revision, and a century of play into the turf. There are no weak holes at Royal County Down — merely holes of varying severity, each demanding precision, courage, and imagination that most courses simply do not require.</p>
+        <div class="destination-getting-there">
+          <p class="destination-getting-there__title">Getting There</p>
+          <div class="destination-getting-there__items">
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Airport</span>
+              <span class="destination-getting-there__val">Belfast International (1 hr)</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Best Season</span>
+              <span class="destination-getting-there__val">May – September</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Stay</span>
+              <span class="destination-getting-there__val">The Slieve Donard Resort</span>
+            </div>
+          </div>
+        </div>
+        <div class="destination-stats">
+          <div class="destination-stat"><span class="destination-stat__value">1889</span><span class="destination-stat__label">Year Founded</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Par 71</span><span class="destination-stat__label">7,218 yards</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">#1</span><span class="destination-stat__label">World Ranking 2025</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== DESTINATION 4: AUGUSTA NATIONAL ===== -->
+    <article class="destination-feature destination-feature--reverse destination-feature--cream fade-in" aria-labelledby="dest-augusta">
+      <div class="destination-feature__image">
+        <img src="https://images.unsplash.com/photo-1504198070370-4d38e07d7395?auto=format&fit=crop&w=1200&q=80" alt="Augusta National golf course with azaleas and perfect fairways" loading="lazy">
+      </div>
+      <div class="destination-feature__content">
+        <span class="destination-feature__number" aria-hidden="true">04</span>
+        <span class="section-label">Georgia, USA</span>
+        <h2 class="destination-feature__name" id="dest-augusta">Augusta National</h2>
+        <p class="destination-feature__country">Augusta National Golf Club &nbsp;·&nbsp; Augusta, Georgia</p>
+        <p class="destination-feature__desc">Augusta National is not a public course — the 300 members guard their privacy and their fairways with equal determination — but its influence on every golfer who has watched the Masters on television is total. Bobby Jones and Alister MacKenzie built it in 1932 on the site of a former indigo plantation, and the combination of elevated tee shots, sloping fairways, and near-impossible putting surfaces have produced more dramatic final-day theatre than any other course on earth.</p>
+        <p class="destination-feature__desc">Amen Corner — holes 11, 12, and 13 — represents the most famous stretch of golf holes in existence. The 12th, a par-3 over Rae's Creek, has destroyed more aspirations and transformed more obscure golfers into champions than any other hole in the game. The azaleas bloom every April, the pines stand perfectly spaced, and the leaderboard tells a story that golf has been telling, in various iterations, since 1934.</p>
+        <div class="destination-getting-there">
+          <p class="destination-getting-there__title">Getting There</p>
+          <div class="destination-getting-there__items">
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Airport</span>
+              <span class="destination-getting-there__val">Augusta Regional (10 min)</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">The Masters</span>
+              <span class="destination-getting-there__val">First full week, April</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Access</span>
+              <span class="destination-getting-there__val">Members &amp; invited guests only</span>
+            </div>
+          </div>
+        </div>
+        <div class="destination-stats">
+          <div class="destination-stat"><span class="destination-stat__value">91</span><span class="destination-stat__label">Masters Tournaments</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Par 72</span><span class="destination-stat__label">7,555 yards</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">#5</span><span class="destination-stat__label">World Ranking 2025</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== DESTINATION 5: ST ANDREWS ===== -->
+    <article class="destination-feature fade-in" aria-labelledby="dest-standrews">
+      <div class="destination-feature__image">
+        <img src="https://images.unsplash.com/photo-1566648007264-c0bfd2340e10?auto=format&fit=crop&w=1200&q=80" alt="St Andrews Old Course with the town skyline and Swilcan Bridge" loading="lazy">
+      </div>
+      <div class="destination-feature__content">
+        <span class="destination-feature__number" aria-hidden="true">05</span>
+        <span class="section-label">Scotland</span>
+        <h2 class="destination-feature__name" id="dest-standrews">St Andrews Old Course</h2>
+        <p class="destination-feature__country">The Old Course &nbsp;·&nbsp; St Andrews, Fife</p>
+        <p class="destination-feature__desc">Golf has been played on the links at St Andrews for more than six centuries. The Old Course is not so much a designed golf course as a geological and cultural fact — the sea receded, the ground dried, and golfers began walking these fairways in the fifteenth century, long before anyone had thought to call it a game. The Swilcan Bridge has been crossed by every great champion; the Road Hole 17th has ended more Open ambitions than any other single obstacle in golf.</p>
+        <p class="destination-feature__desc">To play the Old Course is to make a pilgrimage. The course itself is not conventionally great — some of the par-4s are reachable with driver; the vast shared fairways create unusual strategic problems; the famous double greens can seem almost comically large. But none of that matters. You stand on the 18th tee, the town of St Andrews curving around you on three sides, the North Sea somewhere behind you, and you feel the weight of everything that has happened here. It is irreducible.</p>
+        <div class="destination-getting-there">
+          <p class="destination-getting-there__title">Getting There</p>
+          <div class="destination-getting-there__items">
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Airport</span>
+              <span class="destination-getting-there__val">Edinburgh (1 hr 15 min)</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Best Season</span>
+              <span class="destination-getting-there__val">May – October</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Tee Times</span>
+              <span class="destination-getting-there__val">Ballot system (advance entry)</span>
+            </div>
+          </div>
+        </div>
+        <div class="destination-stats">
+          <div class="destination-stat"><span class="destination-stat__value">30</span><span class="destination-stat__label">Open Championships</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Par 72</span><span class="destination-stat__label">6,721 yards</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">#4</span><span class="destination-stat__label">World Ranking 2025</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== DESTINATION 6: PINEHURST NO. 2 ===== -->
+    <article class="destination-feature destination-feature--reverse destination-feature--cream fade-in" aria-labelledby="dest-pinehurst">
+      <div class="destination-feature__image">
+        <img src="https://images.unsplash.com/photo-1606557985087-c3a67e3fc72d?auto=format&fit=crop&w=1200&q=80" alt="Pinehurst No. 2 with wire grass and crowned greens" loading="lazy">
+      </div>
+      <div class="destination-feature__content">
+        <span class="destination-feature__number" aria-hidden="true">06</span>
+        <span class="section-label">North Carolina, USA</span>
+        <h2 class="destination-feature__name" id="dest-pinehurst">Pinehurst No. 2</h2>
+        <p class="destination-feature__country">Pinehurst Resort &nbsp;·&nbsp; Village of Pinehurst</p>
+        <p class="destination-feature__desc">Donald Ross spent decades refining Pinehurst No. 2, and the course is as much a philosophical position as it is a piece of architecture. The crowned greens — which reject approach shots that aren't played precisely — reward accuracy over power in a way that feels almost anachronistic in the modern game. Miss the green and the ball rolls away into the native wire grass surrounds; get up and down from there and you've earned it.</p>
+        <p class="destination-feature__desc">The 2024 US Open and US Women's Open were both contested at Pinehurst No. 2 in the same week — an unprecedented experiment in equality that worked magnificently, the two fields sharing the same stage and producing entirely different competitions. The course is America's golf heartland, a place that understands what the game is for.</p>
+        <div class="destination-getting-there">
+          <p class="destination-getting-there__title">Getting There</p>
+          <div class="destination-getting-there__items">
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Airport</span>
+              <span class="destination-getting-there__val">Raleigh-Durham (1 hr 15 min)</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Best Season</span>
+              <span class="destination-getting-there__val">March – May, Sep – Nov</span>
+            </div>
+            <div class="destination-getting-there__item">
+              <span class="destination-getting-there__key">Stay</span>
+              <span class="destination-getting-there__val">The Carolina Hotel (resort)</span>
+            </div>
+          </div>
+        </div>
+        <div class="destination-stats">
+          <div class="destination-stat"><span class="destination-stat__value">10</span><span class="destination-stat__label">US Open Championships</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Par 70</span><span class="destination-stat__label">7,588 yards</span></div>
+          <div class="destination-stat"><span class="destination-stat__value">Top 15</span><span class="destination-stat__label">World Ranking 2025</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Subscribe CTA -->
+    <section class="section section-green" id="subscribe-section" aria-labelledby="subscribe-heading-dest">
+      <div class="container" style="text-align:center;">
+        <p style="font-family:var(--font-ui);font-size:var(--text-xs);font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:var(--color-gold);margin-bottom:var(--space-4);">Never Miss an Issue</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(var(--text-3xl),5vw,var(--text-5xl));font-weight:300;font-style:italic;color:var(--color-white);margin-bottom:var(--space-3);" id="subscribe-heading-dest">More Great Destinations Await</h2>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(255,255,255,0.65);margin-bottom:var(--space-8);max-width:none;">Join 240,000 readers worldwide. Four issues per year.</p>
+        <form class="subscribe-form" novalidate aria-label="Subscribe to Links Magazine">
+          <div class="subscribe-form__inner">
+            <label for="subscribe-email-dest" class="sr-only">Email address</label>
+            <input type="email" id="subscribe-email-dest" name="email" placeholder="Your email address" class="subscribe-form__input" autocomplete="email" required>
+            <button type="submit" class="btn btn-gold subscribe-form__btn">Subscribe</button>
+          </div>
+          <div class="subscribe-form__feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="../index.html" class="footer-logo" aria-label="Links Magazine — Home">Links</a>
+          <p class="footer-tagline">The World's Finest Golf Magazine</p>
+          <p class="footer-desc">Published quarterly since 1998. Celebrating the greatest courses and destinations in world golf.</p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Sections</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="article.html">Features</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="gear.html">Gear</a></li>
+            <li><a href="archive.html">Archive</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">About Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Team</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Subscribe</h3>
+          <p class="footer-subscribe-text">Join 240,000 readers worldwide.</p>
+          <a href="../index.html#subscribe-section" class="btn btn-primary footer-subscribe-btn">Get the Magazine</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Links Magazine. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Advertise With Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/magazine.js"></script>
+  <script src="../js/subscribe.js"></script>
+
+</body>
+</html>

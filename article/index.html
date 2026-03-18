@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Trumping of Turnberry — How Scotland's legendary Ailsa Course reclaimed its place among the world's great links. A feature by James Whitmore for Links Magazine.">
+  <title>The Trumping of Turnberry — Links Magazine</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages/article.css">
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ============================================
+       SITE HEADER
+       ============================================ -->
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar__inner">
+          <span class="top-bar__issue">Links Magazine &nbsp;·&nbsp; Great Destinations Issue &nbsp;·&nbsp; Vol. 28</span>
+          <a href="/#subscribe-section" class="top-bar__subscribe">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="main-nav__inner">
+          <ul class="nav-links nav-links--left" role="list">
+            <li><a href="/article/" class="nav-link">Features</a></li>
+            <li><a href="/great-destinations/" class="nav-link">Destinations</a></li>
+            <li><a href="/courses/" class="nav-link">Courses</a></li>
+          </ul>
+          <a href="/" class="site-logo" aria-label="Links Magazine — Home">
+            <span class="logo-wordmark">Links</span>
+            <span class="logo-sub">Magazine</span>
+          </a>
+          <div class="nav-actions">
+            <ul class="nav-links" role="list">
+              <li><a href="/gear/" class="nav-link">Gear</a></li>
+              <li><a href="/archive/" class="nav-link">Archive</a></li>
+            </ul>
+            <button class="nav-search-btn" aria-label="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+            <a href="/#subscribe-section" class="btn btn-outline btn--nav">Subscribe</a>
+          </div>
+          <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-sidebar">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    <aside class="nav-sidebar" id="nav-sidebar" aria-label="Mobile navigation" aria-hidden="true">
+      <button class="nav-sidebar__close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <span class="nav-sidebar__logo">Links</span>
+      <nav class="nav-sidebar__nav">
+        <a href="/article/" class="sidebar-link">Features</a>
+        <a href="/great-destinations/" class="sidebar-link">Destinations</a>
+        <a href="/courses/" class="sidebar-link">Courses</a>
+        <a href="/gear/" class="sidebar-link">Gear</a>
+        <a href="/archive/" class="sidebar-link">Archive</a>
+      </nav>
+      <a href="/#subscribe-section" class="btn btn-primary sidebar-subscribe">Subscribe</a>
+    </aside>
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         ARTICLE HERO IMAGE
+         ============================================ -->
+    <div class="article-hero">
+      <img
+        class="article-hero__image"
+        src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1920&q=80"
+        alt="Turnberry Ailsa Course with the lighthouse on the Ayrshire coast at golden hour"
+        loading="eager"
+        fetchpriority="high"
+      >
+      <div class="article-hero__gradient" aria-hidden="true"></div>
+    </div>
+
+    <!-- ============================================
+         ARTICLE HEADER
+         ============================================ -->
+    <div class="container-article">
+      <header class="article-header">
+        <span class="section-label article-header__section-label">Great Destinations</span>
+        <h1 class="article-header__title">The Trumping of Turnberry</h1>
+        <p class="article-header__deck">How Scotland's legendary Ailsa Course reclaimed its place among the world's great links — through renovation, controversy, and the enduring power of its extraordinary landscape</p>
+        <div class="article-header__meta">
+          <span class="article-header__byline">By James Whitmore</span>
+          <span class="article-header__meta-dot" aria-hidden="true">·</span>
+          <span class="article-header__date">Spring 2025</span>
+          <span class="article-header__meta-dot" aria-hidden="true">·</span>
+          <span class="article-header__read-time" id="read-time" aria-label="Estimated read time">6 min read</span>
+        </div>
+      </header>
+    </div>
+
+    <!-- ============================================
+         ARTICLE BODY + SIDEBAR
+         ============================================ -->
+    <div class="container-article">
+      <div class="article-layout">
+
+        <!-- Main body -->
+        <article class="article-body">
+
+          <p class="drop-cap">There is a moment, usually somewhere around the fourth tee at Turnberry's Ailsa Course, when the Atlantic wind lifts off the Firth of Clyde and the first silhouette of Ailsa Craig emerges from the morning mist — that great plug of volcanic rock rising 1,114 feet from the sea like a forgotten promise — and you understand, truly understand, what it means to play links golf at the edge of the world.</p>
+
+          <p>This is Turnberry. Not the sanitized version filtered through photographs or curated social feeds, but the real thing: raw, improbable, staggeringly beautiful. The course sits on a narrow strip of Ayrshire coastline in southwest Scotland, where the land seems reluctant to release its grip on the sea, where fairways run parallel to cliffs that drop into churning grey water, and where the lighthouse on the headland — built in 1873, still operational — stands as the course's presiding spirit, visible from almost every hole on the back nine.</p>
+
+          <figure class="article-image article-image--full">
+            <img
+              src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1400&q=80"
+              alt="The Turnberry lighthouse on the Ayrshire headland overlooking the Firth of Clyde"
+              loading="lazy"
+            >
+            <figcaption>The lighthouse at Turnberry has watched over the Ailsa Course since 1873 — a constant amid the wind and weather. Photograph: Alasdair Reid.</figcaption>
+          </figure>
+
+          <h2>History Carved in Wind</h2>
+
+          <p>The Ailsa Course has hosted four Open Championships, most famously the 1977 edition that produced what many still regard as the greatest duel in major championship history. Tom Watson and Jack Nicklaus, so closely matched over the final two rounds that the rest of the field barely registered, played 36 holes of golf that achieved a kind of collective perfection rarely seen in elite sport. Watson won with rounds of 65 and 66, finishing at 268 — twelve under par — one stroke ahead of Nicklaus, who was himself three shots clear of the field. They shook hands on the 18th green while the crowd roared, and the moment has endured as one of the sport's defining images.</p>
+
+          <p>The course returned for the 1986 Open, won by Greg Norman in a wire-to-wire display of controlled aggression that anticipated the modern power game by a full decade. Norman led from the first round and never looked troubled, shooting 63 in the second round — a record at the time — before closing with a 69 to win by five. Then came Nick Price's dominant 1994 victory, and finally, most poignantly, the 2009 championship that very nearly gave the sport its greatest story: Tom Watson, at 59 years old, leading the Open through 72 holes before falling to Stewart Cink in a playoff. Watson's final putt on the 18th green, which he missed from eight feet, still provokes the kind of anguish that only golf can produce — the sense that fate, for reasons of its own, had decided against the fairytale.</p>
+
+          <blockquote class="pull-quote">
+            <p>"There are courses you play, and courses that play you. Turnberry does both simultaneously — the landscape becomes an active participant in every shot you attempt."</p>
+            <footer class="pull-quote__attribution">Links Magazine, Great Destinations Issue, 2025</footer>
+          </blockquote>
+
+          <h2>The Renovation Debate</h2>
+
+          <p>When the Trump Organization acquired Turnberry in 2014 for a reported £35 million, the golf world held its breath. The resort had fallen into a certain genteel decline — the famous Turnberry Hotel, with its white Edwardian facade set imperiously above the course, maintained its grandeur, but the course itself required serious investment. What followed was a £200 million renovation overseen by course architect Martin Ebert, commissioned to restore and reimagine the Ailsa for the modern professional game while preserving its essential links character.</p>
+
+          <p>The result is, by most measures, a genuine success. Ebert extended the course to 7,461 yards while managing to retain the routing's intimate relationship with the coastline. New holes along the shoreline — particularly the redesigned 9th and 10th — press closer to the sea than their predecessors, creating moments of genuine strategic drama. The bunkers have been deepened and repositioned with renewed purpose; the greens, many rebuilt from scratch, have recovered their firm, fast links character that is the course's birthright.</p>
+
+          <figure class="article-image article-image--half">
+            <img
+              src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=600&q=80"
+              alt="Looking down the Turnberry Ailsa Course fairway with the coast in the background"
+              loading="lazy"
+            >
+            <figcaption>The 9th hole — one of the redesigned coastal holes — offers views that reward patience.</figcaption>
+          </figure>
+
+          <p>Critics pointed to the addition of a new par-3 hole built on reclaimed coastal land, arguing it disrupts the natural flow of the original routing. They are not entirely wrong — there is a slightly self-conscious quality to the addition, a sense of something imposed rather than discovered. But in the larger context of what Turnberry offers — the views, the turf, the Atlantic wind, the sheer topographic theatre — such objections feel like minor dissonances in an otherwise magnificent symphony.</p>
+
+          <h2>Playing the Course</h2>
+
+          <p>The experience begins before you reach the first tee. The walk from the hotel, past the war memorial to the RAF pilots who trained here during both World Wars — the course was used as a military aerodrome; the ghost of old runways can still be faintly traced beneath certain fairways — sets the tone. History is not incidental here; it is embedded in the landscape itself.</p>
+
+          <p>The early holes play through classic links terrain: undulating fairways of bouncing, running turf, gorse-lined rough that forgives nothing, pot bunkers placed with sadistic intelligence in exactly the places where an instinctive player will instinctively go. The greens are elevated and exposed, their surfaces reading differently depending on where the wind is coming from — which, at Turnberry, is never the same place twice. Then the course turns south toward the lighthouse, and the sea opens up.</p>
+
+          <p>Holes 9 through 12 run along the cliff tops, exposed to whatever the Firth of Clyde chooses to deliver. On calm summer days — which arrive more often than the reputation of Scottish weather suggests — these are the most beautiful four consecutive holes in world golf. The light at this latitude, even in midafternoon, has a quality of softness that makes the grass glow and the sea shimmer, and Ailsa Craig sits on the horizon like something placed there specifically to complete the composition. In a southwest gale, these same holes test the very limits of club selection, imagination, and nerve. A 200-yard par-3 into a headwind becomes a different puzzle entirely from the 200-yard par-3 you played in practice.</p>
+
+          <h2>The Verdict</h2>
+
+          <p>Turnberry under its current ownership remains, at times, a complicated proposition. The political associations are undeniable and the conversations inevitable — they arise on the first tee, over dinner, in the hotel bar. Some visitors find the discomfort sufficient reason to stay away. That is their prerogative, and the position is not unreasonable.</p>
+
+          <p>But the golf — which is ultimately all that the Ailsa Course was built to be judged by — is extraordinary. Wind, sea, turf, and architecture conspire to produce a test that is simultaneously brutal and sublime, demanding enough to have determined four Open Champions and beautiful enough to make even the worst round feel worthwhile. The approach to the 18th — a long, slightly uphill par-4 with the hotel's white facade rising beyond the green — is Turnberry's signature closing image. Every golfer who has stood on that fairway, regardless of their score, seems to arrive at the same private calculation: whatever it cost to be here, it was worth it.</p>
+
+          <p>The lighthouse still stands. The Ailsa Craig still rises from the mist. And the course — older, harder, more demanding than ever — still plays you as much as you play it. Some things, thankfully, are beyond the reach of any owner.</p>
+
+          <!-- Share bar -->
+          <div class="article-share">
+            <span class="article-share__label">Share</span>
+            <a href="#" class="article-share__btn" aria-label="Share on Twitter">Twitter</a>
+            <a href="#" class="article-share__btn" aria-label="Share on Facebook">Facebook</a>
+            <a href="#" class="article-share__btn" aria-label="Copy link">Copy Link</a>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          <div class="at-a-glance">
+            <h2 class="at-a-glance__title">At a Glance</h2>
+            <dl class="at-a-glance__list">
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Location</dt>
+                <dd class="at-a-glance__value">Turnberry, South Ayrshire, Scotland</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Course</dt>
+                <dd class="at-a-glance__value">Ailsa Championship Links</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Par / Yardage</dt>
+                <dd class="at-a-glance__value">Par 70 &nbsp;|&nbsp; 7,461 yards</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Founded</dt>
+                <dd class="at-a-glance__value">1902</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Open Championships</dt>
+                <dd class="at-a-glance__value">4 (1977, 1986, 1994, 2009)</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Original Architect</dt>
+                <dd class="at-a-glance__value">Willie Fernie</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Renovation</dt>
+                <dd class="at-a-glance__value">Martin Ebert (2014–2016)</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Best Season</dt>
+                <dd class="at-a-glance__value">May – September</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Green Fees</dt>
+                <dd class="at-a-glance__value">From £375 (resort guests)</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="at-a-glance" style="margin-top: var(--space-6);">
+            <h2 class="at-a-glance__title">Links Rankings</h2>
+            <dl class="at-a-glance__list">
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">World Ranking</dt>
+                <dd class="at-a-glance__value">#9 — Links Magazine 2025</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Overall Score</dt>
+                <dd class="at-a-glance__value">96 / 100</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Design</dt>
+                <dd class="at-a-glance__value">97 / 100</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Setting</dt>
+                <dd class="at-a-glance__value">99 / 100</dd>
+              </div>
+              <div class="at-a-glance__item">
+                <dt class="at-a-glance__key">Challenge</dt>
+                <dd class="at-a-glance__value">95 / 100</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- ============================================
+         AUTHOR BIO
+         ============================================ -->
+    <div class="container-article">
+      <div class="author-bio">
+        <div class="author-bio__avatar">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+            alt="Portrait of James Whitmore"
+            loading="lazy"
+          >
+        </div>
+        <div>
+          <h3 class="author-bio__name">James Whitmore</h3>
+          <p class="author-bio__text">James Whitmore is Links Magazine's Senior Travel Correspondent. He has played over 300 courses on six continents and has been covering major championship golf for two decades. He is the author of <em>The Open Road: A Journey Through British Links Golf</em>.</p>
+          <div class="author-bio__social">
+            <a href="#">@jwhitmore</a>
+            <a href="#">More by this author</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         RELATED ARTICLES
+         ============================================ -->
+    <div class="container-article">
+      <section class="related-articles" aria-labelledby="related-heading">
+        <h2 class="related-articles__heading" id="related-heading">You May Also Like</h2>
+        <div class="related-articles__grid">
+
+          <article class="article-card">
+            <a href="/great-destinations/" class="article-card__image-wrap" aria-hidden="true" tabindex="-1">
+              <img
+                src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=600&q=80"
+                alt="Royal County Down with mountains of Mourne"
+                loading="lazy"
+              >
+            </a>
+            <div class="article-card__content">
+              <span class="section-label">Destinations</span>
+              <h3 class="article-card__title"><a href="/great-destinations/">Royal County Down: The World's Greatest Links</a></h3>
+              <p class="article-card__byline">By Sarah Mitchell</p>
+              <a href="/great-destinations/" class="article-card__read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <a href="/courses/" class="article-card__image-wrap" aria-hidden="true" tabindex="-1">
+              <img
+                src="https://images.unsplash.com/photo-1426728923317-74d81b75e46a?auto=format&fit=crop&w=600&q=80"
+                alt="Pebble Beach 18th hole along Stillwater Cove"
+                loading="lazy"
+              >
+            </a>
+            <div class="article-card__content">
+              <span class="section-label">Courses</span>
+              <h3 class="article-card__title"><a href="/courses/">Six US Opens at Pebble Beach</a></h3>
+              <p class="article-card__byline">By Thomas Hartley</p>
+              <a href="/courses/" class="article-card__read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <a href="/gear/" class="article-card__image-wrap" aria-hidden="true" tabindex="-1">
+              <img
+                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&w=600&q=80"
+                alt="Golf equipment for links courses"
+                loading="lazy"
+              >
+            </a>
+            <div class="article-card__content">
+              <span class="section-label">Gear</span>
+              <h3 class="article-card__title"><a href="/gear/">What to Pack for Links Golf</a></h3>
+              <p class="article-card__byline">By Richard Hallam</p>
+              <a href="/gear/" class="article-card__read-more">Read More</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Subscribe CTA -->
+    <section class="section section-green" id="subscribe-section" aria-labelledby="subscribe-heading-article">
+      <div class="container">
+        <div style="text-align:center;">
+          <p class="subscribe-cta__eyebrow" style="font-family:var(--font-ui);font-size:var(--text-xs);font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:var(--color-gold);margin-bottom:var(--space-4);">Never Miss an Issue</p>
+          <h2 style="font-family:var(--font-display);font-size:clamp(var(--text-3xl),5vw,var(--text-5xl));font-weight:300;font-style:italic;color:var(--color-white);margin-bottom:var(--space-3);" id="subscribe-heading-article">Continue Reading Links</h2>
+          <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(255,255,255,0.65);margin-bottom:var(--space-8);max-width:none;">Join 240,000 readers worldwide. Four issues per year, delivered to your door.</p>
+          <form class="subscribe-form" novalidate aria-label="Subscribe to Links Magazine">
+            <div class="subscribe-form__inner">
+              <label for="subscribe-email-article" class="sr-only">Email address</label>
+              <input type="email" id="subscribe-email-article" name="email" placeholder="Your email address" class="subscribe-form__input" autocomplete="email" required>
+              <button type="submit" class="btn btn-gold subscribe-form__btn">Subscribe</button>
+            </div>
+            <div class="subscribe-form__feedback" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="/" class="footer-logo" aria-label="Links Magazine — Home">Links</a>
+          <p class="footer-tagline">The World's Finest Golf Magazine</p>
+          <p class="footer-desc">Published quarterly since 1998.</p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Sections</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="/article/">Features</a></li>
+            <li><a href="/great-destinations/">Destinations</a></li>
+            <li><a href="/courses/">Courses</a></li>
+            <li><a href="/gear/">Gear</a></li>
+            <li><a href="/archive/">Archive</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">About Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Team</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Subscribe</h3>
+          <p class="footer-subscribe-text">Join 240,000 readers worldwide.</p>
+          <a href="/#subscribe-section" class="btn btn-primary footer-subscribe-btn">Get the Magazine</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Links Magazine. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Advertise With Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/magazine.js"></script>
+  <script src="../js/subscribe.js"></script>
+
+</body>
+</html>

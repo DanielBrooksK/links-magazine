@@ -1,0 +1,299 @@
+/* ============================================
+   LINKS MAGAZINE — DESTINATIONS PAGE
+   pages/destinations.css
+   ============================================ */
+
+/* ----------------------------------------
+   PAGE HERO
+   ---------------------------------------- */
+.page-hero {
+  position: relative;
+  height: 65vh;
+  min-height: 440px;
+  max-height: 700px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-16) 0;
+  width: 100%;
+}
+
+.page-hero__eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-5xl), 8vw, 7rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.0;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(var(--text-base), 2vw, var(--text-xl));
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 580px;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------
+   DESTINATIONS INTRO
+   ---------------------------------------- */
+.destinations-intro {
+  max-width: 680px;
+}
+
+.destinations-intro p {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+/* ----------------------------------------
+   DESTINATION FEATURE SECTION
+   ---------------------------------------- */
+.destination-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 560px;
+}
+
+.destination-feature:not(:last-child) {
+  margin-bottom: var(--space-4);
+}
+
+.destination-feature--reverse {
+  direction: rtl;
+}
+
+.destination-feature--reverse > * {
+  direction: ltr;
+}
+
+.destination-feature__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.destination-feature__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slower);
+}
+
+.destination-feature:hover .destination-feature__image img {
+  transform: scale(1.04);
+}
+
+.destination-feature__content {
+  padding: var(--space-16) var(--space-12);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.destination-feature--cream .destination-feature__content {
+  background-color: var(--color-cream);
+}
+
+.destination-feature__number {
+  font-family: var(--font-display);
+  font-size: var(--text-8xl);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-gray-100);
+  margin-bottom: calc(-1 * var(--space-6));
+  margin-top: calc(-1 * var(--space-4));
+}
+
+.destination-feature__name {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-4xl), 4.5vw, var(--text-6xl));
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.05;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.015em;
+}
+
+.destination-feature__country {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-green);
+  margin-bottom: var(--space-6);
+}
+
+.destination-feature__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: none;
+  margin-bottom: var(--space-4);
+}
+
+.destination-feature__desc + .destination-feature__desc {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+/* Getting there info */
+.destination-getting-there {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: var(--border-thin);
+}
+
+.destination-getting-there__title {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.destination-getting-there__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.destination-getting-there__item {
+  display: flex;
+  gap: var(--space-3);
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+}
+
+.destination-getting-there__key {
+  color: var(--color-text-muted);
+  min-width: 90px;
+}
+
+.destination-getting-there__val {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Stats sidebar */
+.destination-stats {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+.destination-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.destination-stat__value {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  color: var(--color-green);
+  line-height: 1;
+}
+
+.destination-stat__label {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+/* ----------------------------------------
+   RESPONSIVE
+   ---------------------------------------- */
+@media (max-width: 1024px) {
+  .destination-feature__content {
+    padding: var(--space-10) var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 55vh;
+    min-height: 380px;
+  }
+
+  .destination-feature {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .destination-feature--reverse {
+    direction: ltr;
+  }
+
+  .destination-feature__image {
+    height: 300px;
+    position: relative;
+  }
+
+  .destination-feature__image img {
+    position: absolute;
+  }
+
+  .destination-feature__content {
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .destination-feature__number {
+    font-size: var(--text-6xl);
+  }
+}

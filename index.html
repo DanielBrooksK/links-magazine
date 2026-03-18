@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Links Magazine — The World's Finest Golf Magazine. Great Destinations Issue, Vol. 28. Featuring Turnberry, Pebble Beach, Augusta National and the world's greatest courses.">
+  <title>Links Magazine — Great Destinations Issue</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS load order -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+
+  <!-- ============================================
+       SITE HEADER & NAVIGATION
+       ============================================ -->
+  <header class="site-header" id="site-header">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar__inner">
+          <span class="top-bar__issue">Links Magazine &nbsp;·&nbsp; Great Destinations Issue &nbsp;·&nbsp; Vol. 28 &nbsp;·&nbsp; Spring 2025</span>
+          <a href="#subscribe-section" class="top-bar__subscribe">Subscribe</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main nav -->
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="main-nav__inner">
+
+          <!-- Left links -->
+          <ul class="nav-links nav-links--left" role="list">
+            <li><a href="/article/" class="nav-link">Features</a></li>
+            <li><a href="/great-destinations/" class="nav-link">Destinations</a></li>
+            <li><a href="/courses/" class="nav-link">Courses</a></li>
+          </ul>
+
+          <!-- Logo (centered) -->
+          <a href="/" class="site-logo" aria-label="Links Magazine — Home">
+            <span class="logo-wordmark">Links</span>
+            <span class="logo-sub">Magazine</span>
+          </a>
+
+          <!-- Right links + actions -->
+          <div class="nav-actions">
+            <ul class="nav-links" role="list">
+              <li><a href="/gear/" class="nav-link">Gear</a></li>
+              <li><a href="/archive/" class="nav-link">Archive</a></li>
+            </ul>
+            <button class="nav-search-btn" aria-label="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+            <a href="#subscribe-section" class="btn btn-outline btn--nav">Subscribe</a>
+          </div>
+
+          <!-- Hamburger -->
+          <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-sidebar">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <!-- Mobile sidebar -->
+    <aside class="nav-sidebar" id="nav-sidebar" aria-label="Mobile navigation" aria-hidden="true">
+      <button class="nav-sidebar__close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <span class="nav-sidebar__logo">Links</span>
+      <nav class="nav-sidebar__nav">
+        <a href="/article/" class="sidebar-link">Features</a>
+        <a href="/great-destinations/" class="sidebar-link">Destinations</a>
+        <a href="/courses/" class="sidebar-link">Courses</a>
+        <a href="/gear/" class="sidebar-link">Gear</a>
+        <a href="/archive/" class="sidebar-link">Archive</a>
+      </nav>
+      <a href="#subscribe-section" class="btn btn-primary sidebar-subscribe">Subscribe</a>
+    </aside>
+
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         1. MASTHEAD / ISSUE BAND
+         ============================================ -->
+    <section class="issue-band" aria-label="Current issue">
+      <div class="container">
+        <div class="issue-band__inner">
+          <span class="issue-band__dot">◆</span>
+          <div class="issue-band__ticker" aria-live="polite">
+            <span class="issue-band__item is-active">The Trumping of Turnberry — Scotland's Greatest Links Reborn</span>
+            <span class="issue-band__item">Top 10 Courses of 2025 — The World's Definitive Rankings</span>
+            <span class="issue-band__item">In The Bag — Equipment That Changed the Game This Year</span>
+          </div>
+          <span class="issue-band__dot">◆</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         2. HERO — FULL VIEWPORT
+         ============================================ -->
+    <section class="hero" aria-label="Hero feature">
+      <div class="hero__image">
+        <img
+          src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1920&q=80"
+          alt="Aerial view of Turnberry's Ailsa Course on the Ayrshire coast of Scotland at golden hour"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+      <div class="hero__gradient" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__content">
+          <span class="section-label section-label--white">Great Destinations</span>
+          <h1 class="hero__title">The Trumping<br>of Turnberry</h1>
+          <p class="hero__deck">How Scotland's legendary Ailsa Course reclaimed its place among the world's great links</p>
+          <p class="hero__byline">By James Whitmore &nbsp;·&nbsp; Photography by Alasdair Reid</p>
+          <a href="/article/" class="btn btn-primary btn--large">Read Feature</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         3. FEATURED ARTICLES GRID
+         ============================================ -->
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header stagger-children">
+          <div class="section-header__text">
+            <span class="section-label">In This Issue</span>
+            <h2 class="section-title section-title--small" id="featured-heading">Editor's Selection</h2>
+          </div>
+          <a href="/archive/" class="btn btn-outline">View All Issues</a>
+        </div>
+
+        <div class="featured-grid">
+          <!-- Main large card -->
+          <div class="featured-grid__main fade-in">
+            <article class="article-card article-card--large">
+              <a href="/great-destinations/" class="article-card__image-wrap" aria-hidden="true" tabindex="-1">
+                <img
+                  src="https://images.unsplash.com/photo-1426728923317-74d81b75e46a?auto=format&fit=crop&w=1200&q=80"
+                  alt="Pebble Beach Golf Links at dawn with Pacific Ocean in background"
+                  loading="lazy"
+                >
+              </a>
+              <div class="article-card__content">
+                <span class="section-label">Destinations</span>
+                <h3 class="article-card__title">
+                  <a href="/great-destinations/">Pebble Beach at Dawn</a>
+                </h3>
+                <p class="article-card__deck">Before the gallery ropes go up and the starter calls your name, there are those miraculous grey-light hours when the 18th hole belongs entirely to the sea.</p>
+                <p class="article-card__byline">By Sarah Mitchell</p>
+                <a href="/great-destinations/" class="article-card__read-more">Read More</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Aside: two smaller stacked cards -->
+          <div class="featured-grid__aside stagger-children">
+            <article class="article-card">
+              <a href="/courses/" class="article-card__image-wrap" aria-hidden="true" tabindex="-1">
+                <img
+                  src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=800&q=80"
+                  alt="Links golf fairway in dramatic coastal light"
+                  loading="lazy"
+                >
+              </a>
+              <div class="article-card__content">
+                <span class="section-label">Courses</span>
+                <h3 class="article-card__title">
+                  <a href="/courses/">The New Kings of Links Golf</a>
+                </h3>
+                <p class="article-card__deck">A generation of designers is reshaping what links architecture can mean.</p>
+                <p class="article-card__byline">By Thomas Hartley</p>
+                <a href="/courses/" class="article-card__read-more">Read More</a>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <a href="/gear/" class="article-card__image-wrap" aria-hidden="true" tabindex="-1">
+                <img
+                  src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&w=800&q=80"
+                  alt="Premium golf equipment flat lay featuring modern driver"
+                  loading="lazy"
+                >
+              </a>
+              <div class="article-card__content">
+                <span class="section-label">Gear</span>
+                <h3 class="article-card__title">
+                  <a href="/gear/">Equipment That Changed the Game in 2025</a>
+                </h3>
+                <p class="article-card__deck">From forgiveness technology to raw feel — the kit worth knowing about.</p>
+                <p class="article-card__byline">By Richard Hallam</p>
+                <a href="/gear/" class="article-card__read-more">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         4. THIS ISSUE DIVIDER
+         ============================================ -->
+    <div class="container">
+      <div class="this-issue-divider">
+        <span class="this-issue-divider__label">This Issue</span>
+      </div>
+    </div>
+
+    <!-- ============================================
+         5. GREAT DESTINATIONS SHOWCASE
+         ============================================ -->
+    <section class="section section--sm" aria-labelledby="destinations-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-header__text">
+            <span class="section-label">Series</span>
+            <h2 class="section-title section-title--small" id="destinations-heading">Great Destinations</h2>
+          </div>
+          <a href="/great-destinations/" class="btn btn-outline">Explore All</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="destinations-strip-wrapper">
+          <div class="destinations-strip" id="destinations-strip" role="list" aria-label="Great golf destinations">
+
+            <article class="destination-card" role="listitem">
+              <div class="destination-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=600&q=80"
+                  alt="Turnberry Ailsa Course with lighthouse on Ayrshire coast"
+                  loading="lazy"
+                >
+              </div>
+              <div class="destination-card__overlay" aria-hidden="true"></div>
+              <div class="destination-card__content">
+                <p class="destination-card__country">Scotland</p>
+                <h3 class="destination-card__name">Turnberry</h3>
+                <a href="/great-destinations/" class="destination-card__explore" aria-label="Explore Turnberry, Scotland">Explore</a>
+              </div>
+            </article>
+
+            <article class="destination-card" role="listitem">
+              <div class="destination-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1426728923317-74d81b75e46a?auto=format&fit=crop&w=600&q=80"
+                  alt="Pebble Beach golf holes along the California coastline"
+                  loading="lazy"
+                >
+              </div>
+              <div class="destination-card__overlay" aria-hidden="true"></div>
+              <div class="destination-card__content">
+                <p class="destination-card__country">California</p>
+                <h3 class="destination-card__name">Pebble Beach</h3>
+                <a href="/great-destinations/" class="destination-card__explore" aria-label="Explore Pebble Beach, California">Explore</a>
+              </div>
+            </article>
+
+            <article class="destination-card" role="listitem">
+              <div class="destination-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=600&q=80"
+                  alt="Royal County Down with Mountains of Mourne backdrop in Northern Ireland"
+                  loading="lazy"
+                >
+              </div>
+              <div class="destination-card__overlay" aria-hidden="true"></div>
+              <div class="destination-card__content">
+                <p class="destination-card__country">Northern Ireland</p>
+                <h3 class="destination-card__name">Royal County Down</h3>
+                <a href="/great-destinations/" class="destination-card__explore" aria-label="Explore Royal County Down, Northern Ireland">Explore</a>
+              </div>
+            </article>
+
+            <article class="destination-card" role="listitem">
+              <div class="destination-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1504198070370-4d38e07d7395?auto=format&fit=crop&w=600&q=80"
+                  alt="Augusta National golf course with azaleas in bloom"
+                  loading="lazy"
+                >
+              </div>
+              <div class="destination-card__overlay" aria-hidden="true"></div>
+              <div class="destination-card__content">
+                <p class="destination-card__country">Georgia, USA</p>
+                <h3 class="destination-card__name">Augusta National</h3>
+                <a href="/great-destinations/" class="destination-card__explore" aria-label="Explore Augusta National, Georgia">Explore</a>
+              </div>
+            </article>
+
+            <article class="destination-card" role="listitem">
+              <div class="destination-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1606557985087-c3a67e3fc72d?auto=format&fit=crop&w=600&q=80"
+                  alt="Pinehurst No. 2 fairway and Donald Ross crowned greens"
+                  loading="lazy"
+                >
+              </div>
+              <div class="destination-card__overlay" aria-hidden="true"></div>
+              <div class="destination-card__content">
+                <p class="destination-card__country">North Carolina, USA</p>
+                <h3 class="destination-card__name">Pinehurst No. 2</h3>
+                <a href="/great-destinations/" class="destination-card__explore" aria-label="Explore Pinehurst No. 2, North Carolina">Explore</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         6. PULL QUOTE
+         ============================================ -->
+    <section class="section-cream" aria-label="Quote">
+      <div class="container">
+        <blockquote class="homepage-pull-quote fade-in">
+          <p>"There are courses you play, and courses that play you. Turnberry does both simultaneously."</p>
+          <footer class="homepage-pull-quote__attribution">— Links Magazine, Great Destinations Issue</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============================================
+         7. TOP COURSES 2025 PREVIEW
+         ============================================ -->
+    <section class="section" aria-labelledby="rankings-heading">
+      <div class="container">
+        <div class="rankings-preview-header fade-in">
+          <div>
+            <span class="section-label">Rankings</span>
+            <h2 class="section-title section-title--small" id="rankings-heading">Top Courses · 2025</h2>
+          </div>
+          <a href="/courses/" class="btn btn-outline">Full Rankings</a>
+        </div>
+
+        <ol class="rankings-preview-list stagger-children" aria-label="Top 5 golf courses 2025">
+          <li class="ranking-item">
+            <span class="ranking-number" aria-hidden="true">01</span>
+            <div class="ranking-info">
+              <h3 class="ranking-name">Royal County Down</h3>
+              <p class="ranking-location">Newcastle, Northern Ireland</p>
+              <p class="ranking-desc">Majestic natural links in the shadow of the Mountains of Mourne — the most beautifully situated course on earth.</p>
+            </div>
+          </li>
+          <li class="ranking-item">
+            <span class="ranking-number" aria-hidden="true">02</span>
+            <div class="ranking-info">
+              <h3 class="ranking-name">Pine Valley</h3>
+              <p class="ranking-location">Pine Valley, New Jersey</p>
+              <p class="ranking-desc">The most demanding examination in golf, set in a pine forest that punishes imprecision with absolute severity.</p>
+            </div>
+          </li>
+          <li class="ranking-item">
+            <span class="ranking-number" aria-hidden="true">03</span>
+            <div class="ranking-info">
+              <h3 class="ranking-name">Cypress Point</h3>
+              <p class="ranking-location">Pebble Beach, California</p>
+              <p class="ranking-desc">Alister MacKenzie's masterpiece, where three consecutive ocean holes represent the pinnacle of golf course design.</p>
+            </div>
+          </li>
+          <li class="ranking-item">
+            <span class="ranking-number" aria-hidden="true">04</span>
+            <div class="ranking-info">
+              <h3 class="ranking-name">St Andrews Old Course</h3>
+              <p class="ranking-location">St Andrews, Scotland</p>
+              <p class="ranking-desc">Six centuries of continuous play. The Swilcan Bridge. The Road Hole. Golf's great cathedral.</p>
+            </div>
+          </li>
+          <li class="ranking-item">
+            <span class="ranking-number" aria-hidden="true">05</span>
+            <div class="ranking-info">
+              <h3 class="ranking-name">Augusta National</h3>
+              <p class="ranking-location">Augusta, Georgia</p>
+              <p class="ranking-desc">Bobby Jones and Alister MacKenzie's vision of perfection — a parkland cathedral that hosts the sport's most revered tradition.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================
+         8. GEAR SPOTLIGHT — IN THE BAG
+         ============================================ -->
+    <section class="section section-cream" aria-labelledby="gear-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-header__text">
+            <span class="section-label">Equipment</span>
+            <h2 class="section-title section-title--small" id="gear-heading">In the Bag</h2>
+          </div>
+          <a href="/gear/" class="btn btn-outline">All Reviews</a>
+        </div>
+
+        <div class="gear-spotlight stagger-children">
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&w=600&q=80"
+                alt="TaylorMade Qi35 Driver"
+                loading="lazy"
+              >
+            </div>
+            <div class="product-card__content">
+              <p class="product-card__brand">TaylorMade</p>
+              <h3 class="product-card__name">Qi35 Driver</h3>
+              <span class="tag-badge tag-badge--green">Drivers</span>
+              <p class="product-card__price">$599</p>
+              <p class="product-card__desc">A quantum leap in forgiveness. The carbon crown reduces weight where it matters, pushing the CG impossibly low.</p>
+              <div class="product-card__footer">
+                <div class="rating-stars" aria-label="4.5 out of 5 stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span class="star-half">★</span>
+                </div>
+                <a href="/gear/" class="article-card__read-more">Full Review</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1547347298-4074ad3086f0?auto=format&fit=crop&w=600&q=80"
+                alt="Titleist Pro V1x golf balls"
+                loading="lazy"
+              >
+            </div>
+            <div class="product-card__content">
+              <p class="product-card__brand">Titleist</p>
+              <h3 class="product-card__name">Pro V1x</h3>
+              <span class="tag-badge tag-badge--green">Golf Balls</span>
+              <p class="product-card__price">$54 / dozen</p>
+              <p class="product-card__desc">The benchmark against which all others are measured. Consistent, penetrating flight and exceptional short game feel.</p>
+              <div class="product-card__footer">
+                <div class="rating-stars" aria-label="5 out of 5 stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <a href="/gear/" class="article-card__read-more">Full Review</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                alt="Scotty Cameron Phantom X 5.5 putter on green"
+                loading="lazy"
+              >
+            </div>
+            <div class="product-card__content">
+              <p class="product-card__brand">Scotty Cameron</p>
+              <h3 class="product-card__name">Phantom X 5.5</h3>
+              <span class="tag-badge tag-badge--green">Putters</span>
+              <p class="product-card__price">$449</p>
+              <p class="product-card__desc">Mallet precision with blade soul. The milled insert provides a sound and roll that inspires immediate confidence.</p>
+              <div class="product-card__footer">
+                <div class="rating-stars" aria-label="4.5 out of 5 stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span class="star-half">★</span>
+                </div>
+                <a href="/gear/" class="article-card__read-more">Full Review</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         9. FROM THE ARCHIVE
+         ============================================ -->
+    <section class="section" aria-labelledby="archive-heading">
+      <div class="container">
+        <div class="archive-feature fade-in">
+          <div class="archive-feature__image">
+            <img
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80"
+              alt="Black and white archival photograph of golfer on classic links course"
+              loading="lazy"
+            >
+          </div>
+          <div class="archive-feature__text">
+            <span class="section-label">From the Vault</span>
+            <hr class="rule-divider rule-divider--green" style="width:40px; margin: var(--space-3) 0;">
+            <h2 class="archive-feature__title" id="archive-heading">When Watson Conquered Turnberry</h2>
+            <p class="archive-feature__excerpt">The summer of 1977 produced what many still call the greatest final round in major championship history. Tom Watson and Jack Nicklaus, separated from the field by the width of a fairway, played golf of such sustained brilliance over the final 36 holes that the scoreboard seemed almost irrelevant.</p>
+            <p class="archive-feature__excerpt">Watson's 65-66 over the last two days — finishing at 268, twelve under par — remains among the finest sustained performances in Open Championship history. What made it remarkable was not merely the score, but the company in which it was achieved.</p>
+            <a href="/archive/" class="btn btn-outline" style="margin-top: var(--space-6);">Explore the Archive</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         10. SUBSCRIBE CTA
+         ============================================ -->
+    <section class="section section-green subscribe-cta" id="subscribe-section" aria-labelledby="subscribe-heading">
+      <div class="container">
+        <p class="subscribe-cta__eyebrow">Never Miss an Issue</p>
+        <h2 class="subscribe-cta__heading" id="subscribe-heading">Discover the World's Finest Golf</h2>
+        <p class="subscribe-cta__sub">Join 240,000 readers worldwide. Four issues per year, delivered to your door.</p>
+        <form class="subscribe-form" id="subscribe-form" novalidate aria-label="Subscribe to Links Magazine">
+          <div class="subscribe-form__inner">
+            <label for="subscribe-email" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="subscribe-email"
+              name="email"
+              placeholder="Your email address"
+              class="subscribe-form__input"
+              autocomplete="email"
+              required
+              aria-required="true"
+            >
+            <button type="submit" class="btn btn-gold subscribe-form__btn">Subscribe</button>
+          </div>
+          <div class="subscribe-form__feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col footer-col--brand">
+          <a href="/" class="footer-logo" aria-label="Links Magazine — Home">Links</a>
+          <p class="footer-tagline">The World's Finest Golf Magazine</p>
+          <p class="footer-desc">Published quarterly since 1998. Celebrating the greatest courses, destinations, and culture in world golf.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Sections</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="/article/">Features</a></li>
+            <li><a href="/great-destinations/">Destinations</a></li>
+            <li><a href="/courses/">Courses</a></li>
+            <li><a href="/gear/">Gear</a></li>
+            <li><a href="/archive/">Archive</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">About Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Team</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Subscribe</h3>
+          <p class="footer-subscribe-text">Join 240,000 readers worldwide. Four issues per year.</p>
+          <a href="#subscribe-section" class="btn btn-primary footer-subscribe-btn">Get the Magazine</a>
+          <div class="footer-social">
+            <a href="#" aria-label="Follow on Twitter/X" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="Follow on Instagram" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Follow on Facebook" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Links Magazine. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Advertise With Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/magazine.js"></script>
+  <script src="js/subscribe.js"></script>
+
+</body>
+</html>
