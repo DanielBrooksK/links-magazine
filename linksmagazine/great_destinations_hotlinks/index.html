@@ -887,6 +887,73 @@
     @media (max-width: 480px) {
       .toc-sidebar { width: 80vw; }
     }
+
+    /* ----------------------------------------
+       CA BANNER
+       ---------------------------------------- */
+    .ca-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 34px;
+      background: rgba(184,151,58,0.12);
+      border-bottom: 1px solid rgba(184,151,58,0.3);
+      font-family: 'DM Sans', monospace, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      flex-shrink: 0;
+      pointer-events: all;
+    }
+
+    .ca-banner__label {
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+    }
+
+    .ca-banner__address {
+      font-family: 'Courier New', monospace;
+      font-size: 11.5px;
+      color: var(--gold);
+      cursor: pointer;
+      user-select: all;
+      padding: 2px 8px;
+      border: 1px solid rgba(184,151,58,0.35);
+      border-radius: 2px;
+      transition: background 0.15s;
+      letter-spacing: 0.04em;
+    }
+
+    .ca-banner__address:hover {
+      background: rgba(184,151,58,0.15);
+    }
+
+    .ca-banner__copy {
+      background: none;
+      border: 1px solid rgba(184,151,58,0.4);
+      border-radius: 2px;
+      color: var(--gold);
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 3px 10px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .ca-banner__copy:hover { background: rgba(184,151,58,0.15); }
+    .ca-banner__copy.copied { color: #5cdb95; border-color: #5cdb95; }
+
+    @media (max-width: 768px) {
+      .ca-banner { font-size: 10px; gap: 7px; }
+      .ca-banner__address { font-size: 10px; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    }
   </style>
 </head>
 <body>
@@ -924,6 +991,13 @@
         <a href="/article/" class="topbar-btn">Read Online</a>
         <a href="/#subscribe-section" class="topbar-btn topbar-btn--gold">Subscribe</a>
       </div>
+    </div>
+
+    <!-- CA Banner -->
+    <div class="ca-banner" id="ca-banner">
+      <span class="ca-banner__label">CA</span>
+      <span class="ca-banner__address" id="ca-address" title="Click to copy">PASTE_CA_HERE</span>
+      <button class="ca-banner__copy" id="ca-copy-btn" onclick="copyCa()">Copy</button>
     </div>
 
     <!-- Bottom controls -->
@@ -1398,6 +1472,19 @@
     init();
 
   })();
+  </script>
+
+  <script>
+    function copyCa() {
+      const addr = document.getElementById('ca-address').textContent.trim();
+      const btn = document.getElementById('ca-copy-btn');
+      navigator.clipboard.writeText(addr).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+    document.getElementById('ca-address').addEventListener('click', copyCa);
   </script>
 
 </body>
